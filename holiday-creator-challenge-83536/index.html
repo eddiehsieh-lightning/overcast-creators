@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Holiday Creator Challenge · L'Oréal Paris × Overcast Creators</title>
+<meta name="description" content="Post shoppable L'Oréal Paris videos from Nov 19 to Dec 31 to win cash, luxury bags and a trip to Paris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #111012;
+    --panel: #19181b;
+    --line: rgba(255, 255, 255, .14);
+    --gold: #c9a56b;
+    --gold-soft: rgba(201, 165, 107, .35);
+    --cream: #f2ede3;
+    --ink: #1a1816;
+    --ink-muted: #5e5850;
+    --text: #f5f2ec;
+    --muted: rgba(245, 242, 236, .72);
+    --radius: 14px;
+    --max: 1040px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Jost", system-ui, -apple-system, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--gold); }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  .serif { font-family: "Bodoni Moda", Georgia, serif; font-weight: 400; }
+  .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+  .num { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; color: var(--gold); }
+
+  /* header */
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(17, 16, 18, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .site-header .wrap { display: flex; align-items: center; gap: 18px; min-height: 68px; }
+  .site-header img { width: 128px; filter: brightness(0) invert(1); }
+  .site-header .tag { border-left: 1px solid rgba(255,255,255,.2); padding-left: 16px; font-size: 11px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
+  .site-header nav { margin-left: auto; display: flex; gap: 22px; }
+  .site-header nav a { color: var(--muted); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
+  .site-header nav a:hover { color: var(--gold); }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; padding: clamp(48px, 8vw, 96px) 0 clamp(36px, 5vw, 56px); }
+  .hero::before {
+    content: ""; position: absolute; right: -220px; top: -260px; width: 760px; height: 760px; border-radius: 50%;
+    background: repeating-radial-gradient(circle, transparent 0 58px, var(--gold-soft) 58px 59px);
+    opacity: .55; pointer-events: none;
+  }
+  .hero .wrap { position: relative; }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); }
+  .hero .meta .eyebrow { font-size: 12px; }
+  h1 { margin: 22px 0 0; font-size: clamp(42px, 7.5vw, 84px); line-height: 1.02; letter-spacing: -.01em; }
+  h1 em { color: var(--gold); }
+  .lede { margin: 22px 0 0; max-width: 62ch; font-size: clamp(16px, 1.7vw, 19px); color: var(--muted); }
+
+  .facts { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .facts > div { padding: 22px 20px 20px 0; }
+  .facts > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+  .facts .v { font-size: clamp(22px, 2.6vw, 28px); line-height: 1.15; }
+  .facts .k { margin-top: 8px; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+
+  /* sections */
+  section { padding-top: clamp(56px, 8vw, 96px); scroll-margin-top: 76px; }
+  h2 { margin: 0; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.05; }
+  h2 .num { margin-right: 14px; font-size: .85em; }
+  .intro { margin: 14px 0 0; color: var(--muted); max-width: 62ch; }
+
+  .steps { list-style: none; margin: 28px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .steps li { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 20px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+  .steps .n { font-family: "Bodoni Moda", Georgia, serif; font-size: 28px; line-height: 1; color: var(--gold); }
+  .steps strong { font-weight: 500; }
+
+  .dates { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .date { border-top: 1px solid rgba(255,255,255,.5); padding-top: 18px; }
+  .date.last { border-top-color: var(--gold); }
+  .date .d { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(26px, 3vw, 32px); line-height: 1.1; }
+  .date .l { margin-top: 6px; color: var(--muted); }
+
+  /* prizes */
+  .card { margin-top: 24px; background: var(--cream); color: var(--ink); border-radius: var(--radius); padding: clamp(22px, 4vw, 36px); }
+  .card .eyebrow { color: #9a7a45; }
+  .card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; }
+  .card-head h3 { margin: 0; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.1; flex: 1 1 280px; }
+  .card-head .amount { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(22px, 2.6vw, 28px); color: #9a7a45; }
+  .card p { margin: 12px 0 0; color: var(--ink-muted); }
+  .tbc { font-style: italic; color: #9a7a45; }
+
+  .prize-table { width: 100%; margin-top: 22px; border-collapse: collapse; }
+  .prize-table th { text-align: left; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: #9a7a45; padding: 0 12px 12px 0; border-bottom: 1px solid var(--ink); }
+  .prize-table td { padding: 18px 12px 18px 0; border-bottom: 1px solid rgba(26,24,22,.14); vertical-align: middle; }
+  .prize-table td.p { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(24px, 2.8vw, 30px); white-space: nowrap; }
+  .prize-table td.w { font-weight: 500; white-space: nowrap; }
+  .prize-table td.h { color: var(--ink-muted); }
+
+  .grand { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+  .grand h3 { margin: 10px 0 0; font-size: clamp(32px, 4.4vw, 46px); line-height: 1.05; }
+  .grand h3 em { color: #9a7a45; }
+  .grand .min { border-left: 1px solid rgba(26,24,22,.25); padding-left: 24px; }
+  .grand .min .big { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(44px, 6vw, 64px); line-height: 1; }
+  .grand .min .k { margin-top: 8px; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: #9a7a45; max-width: 16ch; }
+  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+  .signoff { margin: 28px 0 0; text-align: right; font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: 22px; color: var(--gold); }
+
+  /* products */
+  .hero-pick { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; border: 1px solid var(--gold); border-radius: var(--radius); padding: 18px 22px; }
+  .hero-pick strong { font-weight: 500; }
+  .hero-pick .eyebrow { font-size: 12px; }
+  h3.group { margin: 34px 0 6px; font-size: 13px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); font-family: "Jost", sans-serif; }
+  .products { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px; }
+  .products li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .products .name { font-weight: 400; }
+  .products .id { display: inline-flex; align-items: center; gap: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--muted); }
+  .copy { font: 500 11px/1 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); background: transparent; border: 1px solid var(--gold-soft); border-radius: 999px; padding: 6px 10px; cursor: pointer; }
+  .copy:hover { border-color: var(--gold); }
+  .copy.done { color: var(--text); border-color: var(--text); }
+
+  /* join */
+  .join { margin-top: clamp(56px, 8vw, 96px); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
+  .join h2 em { color: var(--gold); }
+  .join p { margin: 12px 0 0; color: var(--muted); }
+  .join .qr { background: #fff; border-radius: 12px; padding: 10px; width: 180px; }
+  .join .qr-note { margin-top: 8px; font-size: 13px; color: var(--muted); text-align: center; max-width: 180px; }
+  .disclaimer { margin-top: 18px; font-size: 13px; color: rgba(245,242,236,.55); }
+
+  .site-footer { margin-top: 48px; padding: 24px 20px 44px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 20px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: rgba(245,242,236,.6); }
+  .site-footer .sign { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--gold); }
+
+  @media (max-width: 900px) {
+    .site-header nav { display: none; }
+  }
+  @media (max-width: 760px) {
+    .facts { grid-template-columns: 1fr 1fr; }
+    .facts > div:nth-child(3) { border-left: 0; padding-left: 0; }
+    .facts > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .dates { grid-template-columns: 1fr 1fr; row-gap: 26px; }
+    .products { grid-template-columns: 1fr; }
+    .grand, .join { grid-template-columns: 1fr; }
+    .grand .min { border-left: 0; padding-left: 0; border-top: 1px solid rgba(26,24,22,.25); padding-top: 18px; }
+    .join .qr, .join .qr-note { margin-left: auto; margin-right: auto; }
+    /* prize table becomes stacked rows */
+    .prize-table thead { display: none; }
+    .prize-table, .prize-table tbody, .prize-table tr, .prize-table td { display: block; width: 100%; }
+    .prize-table tr { padding: 16px 0; border-bottom: 1px solid rgba(26,24,22,.14); }
+    .prize-table td { border: 0; padding: 2px 0; }
+    .prize-table td.w, .prize-table td.p { white-space: normal; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 16px; }
+    .site-header .tag { display: none; }
+    .site-header img { width: 104px; }
+    .steps li { grid-template-columns: 38px 1fr; font-size: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <img src="loreal-paris-logo.svg" alt="L'Oréal Paris">
+    <span class="tag">Holiday Creator Challenge</span>
+    <nav aria-label="Brief sections">
+      <a href="#qualify">How to qualify</a>
+      <a href="#dates">Dates</a>
+      <a href="#prizes">Prizes</a>
+      <a href="#products">Products</a>
+      <a href="#join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="meta">
+        <span class="eyebrow">Creator challenge brief · Draft for review</span>
+        <span>TikTok Shop US · Nov 19 – Dec 31</span>
+      </div>
+      <p class="eyebrow" style="margin: 30px 0 0;">2 creator challenges · Enter both</p>
+      <h1 class="serif">Create videos to win <em>a trip to Paris.</em></h1>
+      <p class="lede">Post shoppable L'Oréal Paris videos from Nov 19 to Dec 31. Win from $5,000 in cash and two luxury bags, and be the top GMV driver with $25,000+ to win a trip to Paris. All winners are announced together on January 5.</p>
+
+      <div class="facts">
+        <div><div class="v serif">Nov 19 – Dec 31</div><div class="k">Contest dates</div></div>
+        <div><div class="v serif">Paris</div><div class="k">Grand prize</div></div>
+        <div><div class="v serif">#lorealparisholiday</div><div class="k">Hashtag</div></div>
+        <div><div class="v serif">Jan 5</div><div class="k">Winners</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="qualify" class="wrap">
+    <h2 class="serif"><span class="num">01</span>How to qualify</h2>
+    <p class="intro">Hit the minimum each month (November and December) to be eligible for any prize.</p>
+    <ol class="steps">
+      <li><span class="n">1</span><span><strong>Post 5+ dedicated shoppable videos a month:</strong> at least 2 featuring a priority bundle and 3 featuring priority singles.</span></li>
+      <li><span class="n">2</span><span><strong>Make sales.</strong> Every L'Oréal Paris product on TikTok Shop counts toward your GMV, not just the priority list.</span></li>
+      <li><span class="n">3</span><span><strong>Join the challenge Lark channel</strong> (<a href="#join">QR code below</a>) for updates, leaderboards and winners.</span></li>
+      <li><span class="n">4</span><span><strong>Required in every post:</strong> a direct link to the TikTok Shop product listing, @lorealparis tagged in the caption, and #lorealparis #lorealparisholiday.</span></li>
+    </ol>
+  </section>
+
+  <section id="dates" class="wrap">
+    <h2 class="serif"><span class="num">02</span>Key dates</h2>
+    <div class="dates">
+      <div class="date"><div class="d">Nov 19</div><div class="l">Challenge opens</div></div>
+      <div class="date"><div class="d">Nov 30</div><div class="l">November results close</div></div>
+      <div class="date"><div class="d">Dec 31</div><div class="l">Challenge ends</div></div>
+      <div class="date last"><div class="d">Jan 5</div><div class="l">All winners announced</div></div>
+    </div>
+    <p class="signoff">À vous de jouer.</p>
+  </section>
+
+  <section id="prizes" class="wrap">
+    <p class="eyebrow" style="margin: 0 0 12px;">Two challenges · Enter both</p>
+    <h2 class="serif">The prizes</h2>
+    <p class="intro">$5,000 in cash and two luxury bags, plus a trip to Paris for the top GMV driver who hits $25,000 or more.</p>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="eyebrow" style="flex-basis: 100%;">Challenge 01</span>
+        <h3 class="serif">Cash prizes &amp; luxury bags</h3>
+        <span class="amount">$5,000 cash</span>
+      </div>
+      <p>Cash tiers are counted separately for November and December. Won on GMV, 25 winners in total, all announced Jan 5.</p>
+      <table class="prize-table">
+        <thead><tr><th>Prize</th><th>Winners</th><th>How to win</th></tr></thead>
+        <tbody>
+          <tr><td class="p">$100</td><td class="w">10 winners · 5 Nov, 5 Dec</td><td class="h">First 5 creators each month to hit the GMV goal <span class="tbc">(goal TBC)</span></td></tr>
+          <tr><td class="p">$200</td><td class="w">10 winners · 5 Nov, 5 Dec</td><td class="h">First 5 creators each month to hit the GMV goal <span class="tbc">(goal TBC)</span></td></tr>
+          <tr><td class="p">$500</td><td class="w">2 winners · 1 Nov, 1 Dec</td><td class="h">Top GMV driver of the month</td></tr>
+          <tr><td class="p">$1,000</td><td class="w">1 winner</td><td class="h">Top GMV driver, Nov 19 – Dec 31</td></tr>
+          <tr><td class="p">Bag</td><td class="w">2 winners</td><td class="h">Luxury bag <span class="tbc">(style TBC)</span> · #2 and #3 GMV drivers, Nov 19 – Dec 31. Min. $5,000 GMV to win.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card grand">
+      <div>
+        <span class="eyebrow">Challenge 02 · Grand prize</span>
+        <h3 class="serif">A trip to <em>Paris</em></h3>
+        <p>The creator with the highest GMV from Nov 19 to Dec 31 wins the trip, as long as they drive at least $25,000. The winner is announced with all winners on Jan 5. Full trip details to come.</p>
+      </div>
+      <div class="min">
+        <div class="big">$25K</div>
+        <div class="k">Minimum GMV to win</div>
+      </div>
+    </div>
+    <p class="note">If no creator reaches $25,000 in GMV, the trip is not awarded. Creators can win in both challenges.</p>
+    <p class="signoff">Bonne chance.</p>
+  </section>
+
+  <section id="products" class="wrap">
+    <h2 class="serif"><span class="num">03</span>Priority products</h2>
+    <p class="intro">Your 2 bundle and 3 single videos come from this list. Search the product ID in TikTok Shop to add it to your showcase.</p>
+
+    <div class="hero-pick">
+      <span><strong>Must-feature:</strong> L'Oréal Paris 2026 Holiday Advent Calendar</span>
+      <span class="eyebrow">Holiday hero</span>
+    </div>
+
+    <h3 class="group">Bundles · Post at least 2</h3>
+    <ul class="products">
+      <li><span class="name">Stay Put Power Duo</span><span class="id">1731456886693139053</span></li>
+      <li><span class="name">Home and Away Spray Duo</span><span class="id">1732111410279715437</span></li>
+      <li><span class="name">Fresh Glow Bundle 7</span><span class="id">1732554833094021741</span></li>
+      <li><span class="name">Effortless Edit 5-Piece Bundle</span><span class="id">1732555268020671085</span></li>
+      <li><span class="name">Extensionist Mascara Black + Brown Bundle</span><span class="id">1732111413756727917</span></li>
+    </ul>
+
+    <h3 class="group">Singles · Post at least 3</h3>
+    <ul class="products">
+      <li><span class="name">True Match Hyaluron Tinted Balm Foundation</span><span class="id">1732592650071216749</span></li>
+      <li><span class="name">Revitalift Triple Power Moisturizer</span><span class="id">1729388659727176301</span></li>
+      <li><span class="name">Age Perfect Cell Renewal Midnight Cream</span><span class="id">1729388737037046381</span></li>
+      <li><span class="name">Plump Ambition Infinite Lights Lip Oil</span><span class="id">1729505252659140205</span></li>
+      <li><span class="name">True Match Lumi Glotion</span><span class="id">1729400402831970925</span></li>
+      <li><span class="name">Iron Sleek Coat Smoothing Treatment</span><span class="id">1732197978998018669</span></li>
+      <li><span class="name">Extensionist Mascara</span><span class="id">1731689771775201901</span></li>
+      <li><span class="name">Volume Liberté Mascara</span><span class="id">1732660640258888301</span></li>
+      <li><span class="name">Magic Filler Hair Filler Powder</span><span class="id">1732022083561689709</span></li>
+      <li><span class="name">Infallible Blur-fection Setting Powder</span><span class="id">1730518820142486125</span></li>
+      <li><span class="name">Plump Ambition pH Hyaluron Lip Oil</span><span class="id">1731196130042352237</span></li>
+      <li><span class="name">Infallible Cushion Foundation</span><span class="id">1732356124784562797</span></li>
+      <li><span class="name">Collagen Moisture Bounce Serum</span><span class="id">1731296992532075117</span></li>
+      <li><span class="name">True Match Hyaluron Tinted Balm Embellisher</span><span class="id">1732523196091241069</span></li>
+      <li><span class="name">Blurfiller Blurring Lip Contour</span><span class="id">1732149619077321325</span></li>
+      <li><span class="name">Collagen Daily Face Moisturizer</span><span class="id">1731673086761931373</span></li>
+      <li><span class="name">Magic Root Cover Up Spray</span><span class="id">1731867644183351917</span></li>
+      <li><span class="name">Lumi Bronzer Stick</span><span class="id">1729490387226433133</span></li>
+      <li><span class="name">Eye Bag Instant Eraser</span><span class="id">1732222753194087021</span></li>
+      <li><span class="name">Elvive Extraordinary Oil</span><span class="id">1732751706780373613</span></li>
+    </ul>
+  </section>
+
+  <div id="join" class="wrap" style="scroll-margin-top: 76px;">
+    <div class="join">
+      <div>
+        <h2 class="serif">Ready? <em>Join the challenge on Lark.</em></h2>
+        <p>Scan the QR code to join the L'Oréal Paris Creator Community group.</p>
+        <p class="disclaimer">Disclaimer: These contests are run solely by Overcast Digital. They are not sponsored, endorsed, or administered by, and have no affiliation with, L'Oréal Paris or L'Oréal USA.</p>
+      </div>
+      <div>
+        <img class="qr" src="lark-qr.png" alt="QR code to join the L'Oréal Paris Creator Community group on Lark" width="632" height="624" loading="lazy">
+        <div class="qr-note">On your phone? Screenshot it and open it from Lark's scanner.</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap site-footer">
+  <span>L'Oréal Paris × Overcast Creators</span>
+  <span class="sign">Merci, créateurs.</span>
+</footer>
+
+<script>
+  // Tap-to-copy product IDs, so creators can paste them into TikTok Shop search.
+  document.querySelectorAll(".products .id").forEach(function (el) {
+    var id = el.textContent.trim();
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "copy";
+    btn.textContent = "Copy";
+    btn.setAttribute("aria-label", "Copy product ID " + id);
+    btn.addEventListener("click", function () {
+      var done = function () {
+        btn.textContent = "Copied";
+        btn.classList.add("done");
+        setTimeout(function () { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(id).then(done, function () {});
+      }
+    });
+    el.appendChild(btn);
+  });
+</script>
+</body>
+</html>
