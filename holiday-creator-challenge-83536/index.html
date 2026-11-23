@@ -8,164 +8,262 @@
 <meta name="description" content="Post shoppable L'Oréal Paris videos from Nov 19 to Dec 31 to win cash prizes, a designer luxury bag and a chance at a trip to Paris.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="gold-glitter.webp">
 <style>
   :root {
-    --bg: #111012;
-    --panel: #19181b;
-    --line: rgba(255, 255, 255, .14);
-    --gold: #c9a56b;
-    --gold-soft: rgba(201, 165, 107, .35);
-    --cream: #f2ede3;
-    --ink: #1a1816;
-    --ink-muted: #5e5850;
-    --text: #f5f2ec;
-    --muted: rgba(245, 242, 236, .72);
-    --radius: 14px;
-    --max: 1040px;
+    --bg: #0d0b0c;
+    --panel: #17141a;
+    --line: rgba(255, 255, 255, .12);
+    --gold: #d6b26f;
+    --gold-2: #f3dca4;
+    --gold-deep: #9a7a45;
+    --gold-soft: rgba(214, 178, 111, .3);
+    --red: #c8102e;
+    --red-deep: #6e0a1a;
+    --cream: #f6f0e4;
+    --ink: #1a1614;
+    --ink-muted: #5e564d;
+    --text: #f7f3ec;
+    --muted: rgba(247, 243, 236, .74);
+    --radius: 22px;
+    --max: 1140px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Jost", system-ui, -apple-system, sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.6;
-    text-wrap: pretty;
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Jost", system-ui, -apple-system, sans-serif; font-weight: 300;
+    font-size: 16px; line-height: 1.6; text-wrap: pretty; overflow-x: hidden;
   }
   img { display: block; max-width: 100%; height: auto; }
   a { color: var(--gold); }
   :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
   .serif { font-family: "Bodoni Moda", Georgia, serif; font-weight: 400; }
   .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
-  .num { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; color: var(--gold); }
+  .gold-text { background: linear-gradient(100deg, var(--gold-2), var(--gold) 45%, #b8873e); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
   /* header */
-  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(17, 16, 18, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(13, 11, 12, .86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .site-header .wrap { display: flex; align-items: center; gap: 18px; min-height: 68px; }
   .site-header img { width: 128px; filter: brightness(0) invert(1); }
   .site-header .tag { border-left: 1px solid rgba(255,255,255,.2); padding-left: 16px; font-size: 11px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
-  .site-header nav { margin-left: auto; display: flex; gap: 22px; }
-  .site-header nav a { color: var(--muted); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
-  .site-header nav a:hover { color: var(--gold); }
+  .site-header nav { margin-left: auto; display: flex; gap: 6px; }
+  .site-header nav a { color: var(--muted); font-size: 12px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 8px 12px; border-radius: 999px; }
+  .site-header nav a:hover { color: var(--ink); background: var(--gold); }
 
   /* hero */
-  .hero { position: relative; overflow: hidden; padding: clamp(48px, 8vw, 96px) 0 clamp(36px, 5vw, 56px); }
-  .hero::before {
-    content: ""; position: absolute; right: -220px; top: -260px; width: 760px; height: 760px; border-radius: 50%;
-    background: repeating-radial-gradient(circle, transparent 0 58px, var(--gold-soft) 58px 59px);
-    opacity: .55; pointer-events: none;
-  }
-  .hero .wrap { position: relative; }
-  .hero .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); }
-  .hero .meta .eyebrow { font-size: 12px; }
-  h1 { margin: 22px 0 0; font-size: clamp(42px, 7.5vw, 84px); line-height: 1.02; letter-spacing: -.01em; }
-  h1 em { color: var(--gold); }
-  .lede { margin: 22px 0 0; max-width: 62ch; font-size: clamp(16px, 1.7vw, 19px); color: var(--muted); }
+  .hero { position: relative; overflow: hidden; padding: clamp(28px, 4.5vw, 56px) 0 clamp(36px, 4.5vw, 56px);
+    background:
+      radial-gradient(900px 520px at 85% 10%, rgba(200, 16, 46, .38), transparent 60%),
+      radial-gradient(600px 360px at 0% 85%, rgba(214, 178, 111, .12), transparent 70%),
+      var(--bg); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(24px, 4vw, 48px); align-items: center; }
+  .hero .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: 13px; color: var(--muted); }
+  .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--gold-soft); border-radius: 999px; padding: 6px 14px; }
+  .pill.solid { background: var(--red); border-color: var(--red); color: #fff; }
+  .pill.solid.eyebrow { color: #fff; }
+  h1 { margin: 16px 0 0; font-size: clamp(52px, 8.4vw, 108px); line-height: 1; letter-spacing: -.015em; }
+  h1 em { font-style: italic; }
+  .lede { margin: 20px 0 0; max-width: 56ch; font-size: clamp(16px, 1.6vw, 19px); color: var(--muted); }
+  .cta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; font-weight: 500; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; border-radius: 999px; padding: 13px 26px; transition: transform .2s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.primary { background: linear-gradient(100deg, var(--gold-2), var(--gold)); color: var(--ink); box-shadow: 0 10px 30px rgba(214,178,111,.28); }
+  .btn.ghost { border: 1px solid rgba(255,255,255,.35); color: var(--text); }
 
-  .facts { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .facts > div { padding: 22px 20px 20px 0; }
-  .facts > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
-  .facts .v { font-size: clamp(22px, 2.6vw, 28px); line-height: 1.15; }
-  .facts .k { margin-top: 8px; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+  /* hero visual */
+  .visual { position: relative; aspect-ratio: 4 / 5; max-width: 470px; justify-self: center; width: 100%; }
+  .arch { position: absolute; inset: 0 8% 6% 8%; border-radius: 999px 999px 26px 26px; overflow: hidden; border: 1px solid var(--gold-soft); box-shadow: 0 40px 80px rgba(0,0,0,.55); }
+  .arch img { width: 100%; height: 100%; object-fit: cover; }
+  .arch::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(13,11,12,.55)); }
+  .tile { position: absolute; background: var(--cream); border-radius: 50%; overflow: hidden; border: 3px solid var(--gold); box-shadow: 0 18px 40px rgba(0,0,0,.5); animation: float 6s ease-in-out infinite; }
+  .tile img { width: 100%; height: 100%; object-fit: contain; }
+  .tile.t1 { width: 40%; aspect-ratio: 1; left: -4%; bottom: 2%; }
+  .tile.t2 { width: 30%; aspect-ratio: 1; right: -2%; top: 18%; animation-delay: -3s; }
+  .tile.t2 img { object-fit: contain; padding: 8%; }
+  .stamp { position: absolute; right: 2%; bottom: 10%; width: 118px; aspect-ratio: 1; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; text-align: center; transform: rotate(-10deg); box-shadow: 0 14px 30px rgba(110,10,26,.6); border: 2px dashed rgba(255,255,255,.5); }
+  .stamp b { display: block; font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-weight: 400; font-size: 26px; line-height: 1.15; }
+  .stamp span { display: block; font-size: 9px; font-weight: 600; letter-spacing: .18em; line-height: 1.2; text-transform: uppercase; margin-top: 12px; }
+  .spark { position: absolute; width: 14px; height: 14px; background: var(--gold-2); clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: twinkle 2.6s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @keyframes twinkle { 0%, 100% { opacity: .25; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.1); } }
+
+  .facts { margin-top: clamp(28px, 4vw, 40px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .facts > div { min-width: 0; background: rgba(255,255,255,.04); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .facts .v { font-size: clamp(18px, 2.1vw, 24px); line-height: 1.2; overflow-wrap: anywhere; }
+  .facts .k { margin-top: 4px; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
 
   /* sections */
-  section { padding-top: clamp(56px, 8vw, 96px); scroll-margin-top: 76px; }
-  h2 { margin: 0; font-size: clamp(32px, 4.6vw, 48px); line-height: 1.05; }
-  h2 .num { margin-right: 14px; font-size: .85em; }
-  .intro { margin: 14px 0 0; color: var(--muted); max-width: 62ch; }
+  section.wrap { padding-top: clamp(56px, 7vw, 88px); scroll-margin-top: 76px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; }
+  .sec-head h2 { min-width: 0; }
+  .sec-head .num { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: clamp(44px, 5.4vw, 64px); line-height: 1; padding-right: .06em; }
+  h2 { margin: 0; font-size: clamp(30px, 4.2vw, 48px); line-height: 1.1; }
+  .intro { margin: 18px 0 0; color: var(--muted); max-width: 62ch; font-size: 17px; }
 
-  .steps { list-style: none; margin: 28px 0 0; padding: 0; border-top: 1px solid var(--line); }
-  .steps li { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 20px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
-  .steps .n { font-family: "Bodoni Moda", Georgia, serif; font-size: 28px; line-height: 1; color: var(--gold); }
-  .steps strong { font-weight: 500; }
+  /* steps */
+  .steps { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .steps li { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px 20px 80px; font-size: 16px; line-height: 1.55; }
+  .steps .n { position: absolute; left: 20px; top: 18px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-family: "Bodoni Moda", Georgia, serif; font-size: 22px; line-height: 1; color: var(--ink); background: linear-gradient(135deg, var(--gold-2), var(--gold)); }
+  .steps strong { font-weight: 500; color: #fff; }
 
-  .dates { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-  .date { border-top: 1px solid rgba(255,255,255,.5); padding-top: 18px; }
-  .date.last { border-top-color: var(--gold); }
-  .date .d { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(26px, 3vw, 32px); line-height: 1.1; }
-  .date .l { margin-top: 6px; color: var(--muted); }
+  /* dates */
+  .timeline { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: linear-gradient(90deg, rgba(255,255,255,.25), var(--gold)); }
+  .date { position: relative; padding-top: 34px; padding-right: 12px; min-width: 0; }
+  .date::before { content: ""; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--bg); border: 2px solid rgba(255,255,255,.7); }
+  .date.last::before { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 8px rgba(214,178,111,.18); }
+  .date .d { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; }
+  .date.last .d { color: var(--gold); }
+  .date .l { margin-top: 8px; color: var(--muted); }
+  /* Key dates: light pulse travelling the line, nodes lighting up in turn */
+  .timeline::after { content: ""; position: absolute; top: 9px; left: 0; width: 140px; height: 6px; border-radius: 6px; background: linear-gradient(90deg, transparent, var(--gold-2), #fff, var(--gold-2), transparent); filter: blur(1px) drop-shadow(0 0 8px rgba(243,220,164,.9)); animation: travel 4s cubic-bezier(.5,0,.5,1) infinite; pointer-events: none; }
+  @keyframes travel { 0% { left: 0; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { left: calc(100% - 140px); opacity: 0; } }
+  .date::before { animation: node 4s ease-in-out infinite; }
+  .date:nth-child(2)::before { animation-delay: 1s; }
+  .date:nth-child(3)::before { animation-delay: 2s; }
+  .date:nth-child(4)::before { animation-delay: 3s; }
+  @keyframes node { 0%, 18%, 100% { box-shadow: 0 0 0 0 rgba(243,220,164,0); border-color: rgba(255,255,255,.7); } 6% { box-shadow: 0 0 0 6px rgba(243,220,164,.25), 0 0 22px rgba(243,220,164,.8); border-color: var(--gold-2); } }
+  .date.last::before { animation: beacon 2s ease-in-out infinite; }
+  @keyframes beacon { 0%, 100% { box-shadow: 0 0 0 6px rgba(214,178,111,.18), 0 0 12px rgba(243,220,164,.4); } 50% { box-shadow: 0 0 0 12px rgba(214,178,111,.08), 0 0 30px rgba(243,220,164,.9); } }
+  .signoff { margin: 24px 0 0; text-align: right; font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.3; }
 
   /* prizes */
-  .card { margin-top: 24px; background: var(--cream); color: var(--ink); border-radius: var(--radius); padding: clamp(22px, 4vw, 36px); }
-  .card .eyebrow { color: #9a7a45; }
-  .card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; }
-  .card-head h3 { margin: 0; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.1; flex: 1 1 280px; }
-  .card-head .amount { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(22px, 2.6vw, 28px); color: #9a7a45; }
-  .card p { margin: 12px 0 0; color: var(--ink-muted); }
-  .tbc { font-style: italic; color: #9a7a45; }
+  .prizes-band { position: relative; margin-top: clamp(36px, 5vw, 56px); padding: clamp(44px, 6vw, 72px) 0; background: linear-gradient(180deg, rgba(13,11,12,.88), rgba(13,11,12,.94)), url("cream-texture.webp") center / cover; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .prizes-band section { padding-top: 0; }
+  .card { margin-top: 24px; background: var(--cream); color: var(--ink); border-radius: var(--radius); padding: clamp(20px, 3.5vw, 34px); }
+  .card .eyebrow { color: var(--gold-deep); }
+  .card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; }
+  .card-head h3 { margin: 0; font-size: clamp(26px, 3.2vw, 34px); line-height: 1.15; flex: 1 1 280px; }
+  .card-head .amount { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(24px, 3vw, 32px); color: var(--red); white-space: nowrap; }
+  .card p { margin: 10px 0 0; color: var(--ink-muted); }
 
-  .prize-table { width: 100%; margin-top: 22px; border-collapse: collapse; }
-  .prize-table th { text-align: left; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: #9a7a45; padding: 0 12px 12px 0; border-bottom: 1px solid var(--ink); }
-  .prize-table td { padding: 18px 12px 18px 0; border-bottom: 1px solid rgba(26,24,22,.14); vertical-align: middle; }
-  .prize-table td.p { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(24px, 2.8vw, 30px); white-space: nowrap; }
-  .prize-table td.w { font-weight: 500; white-space: nowrap; }
-  .prize-table td.h { color: var(--ink-muted); }
+  .tiers { list-style: none; margin: 20px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+  .tier { min-width: 0; background: #fff; border: 1px solid rgba(26,22,20,.1); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .tier .p { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.1; color: var(--ink); }
+  .tier .w { align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-deep); background: rgba(214,178,111,.18); border-radius: 999px; padding: 5px 10px; }
+  .tier .h { color: var(--ink-muted); font-size: 14.5px; line-height: 1.5; }
+  .tier.bag { background: linear-gradient(160deg, #2a1a12, #120c0a); color: var(--text); border-color: transparent; }
+  .tier.bag .p { color: var(--gold-2); font-style: italic; font-size: clamp(24px, 2.2vw, 28px); line-height: 1.1; }
+  .tier.bag .w { color: var(--ink); background: var(--gold); }
+  .tier.bag .h { color: rgba(247,243,236,.8); }
 
-  .grand { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-  .grand h3 { margin: 10px 0 0; font-size: clamp(32px, 4.4vw, 46px); line-height: 1.05; }
-  .grand h3 em { color: #9a7a45; }
-  .grand .min { border-left: 1px solid rgba(26,24,22,.25); padding-left: 24px; }
-  .grand .min .big { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(44px, 6vw, 64px); line-height: 1; }
-  .grand .min .k { margin-top: 8px; font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: #9a7a45; max-width: 16ch; }
-  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
-  .signoff { margin: 28px 0 0; text-align: right; font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: 22px; color: var(--gold); }
+  .grand { margin-top: 14px; position: relative; overflow: hidden; border-radius: var(--radius); display: grid; grid-template-columns: 1.15fr .85fr; background: linear-gradient(120deg, var(--red-deep), var(--red) 60%, #e0324f); color: #fff; }
+  .grand .copy-side { padding: clamp(22px, 4vw, 40px); }
+  .grand .eyebrow { display: block; color: var(--gold-2); line-height: 1.4; }
+  .grand h3 { margin: 16px 0 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.08; }
+  .grand h3 em { color: var(--gold-2); }
+  .grand p { margin: 12px 0 0; color: rgba(255,255,255,.88); max-width: 46ch; }
+  .grand .min { margin-top: 20px; display: inline-flex; align-items: center; gap: 16px; background: rgba(0,0,0,.22); border: 1px solid rgba(255,255,255,.25); border-radius: 18px; padding: 14px 20px; }
+  .grand .min .big { font-family: "Bodoni Moda", Georgia, serif; font-size: clamp(42px, 5.2vw, 60px); line-height: 1.05; background: linear-gradient(100deg, #fff 0%, var(--gold-2) 30%, #fff 45%, var(--gold) 60%, #fff 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 3.2s linear infinite, flicker 5s steps(1) infinite; filter: drop-shadow(0 0 10px rgba(243,220,164,.55)); }
+  /* $25K badge: rotating gold edge, pulsing glow and a glitchy flicker */
+  @property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+  .grand .min { position: relative; isolation: isolate; border: 0 !important; background: rgba(40, 4, 12, .55) !important; animation: glow 2.4s ease-in-out infinite; }
+  .grand .min::before { content: ""; position: absolute; inset: 0; z-index: -1; padding: 2px; border-radius: inherit; background: conic-gradient(from var(--ang), transparent 0 55%, var(--gold-2) 70%, #fff 75%, var(--gold) 82%, transparent 92%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: spin 3s linear infinite; }
+  .grand .min .k { animation: flicker 5s steps(1) infinite .4s; }
+  @keyframes spin { to { --ang: 360deg; } }
+  @keyframes shimmer { from { background-position: 125% 0; } to { background-position: -125% 0; } }
+  @keyframes glow { 0%, 100% { box-shadow: 0 0 0 1px rgba(243,220,164,.25), 0 0 18px rgba(243,220,164,.25); } 50% { box-shadow: 0 0 0 1px rgba(243,220,164,.5), 0 0 36px rgba(243,220,164,.55); } }
+  @keyframes flicker { 0%, 100% { opacity: 1; } 71% { opacity: .35; } 72% { opacity: 1; } 74% { opacity: .5; } 75% { opacity: 1; } 91% { opacity: .6; } 92% { opacity: 1; } }
+  .grand .min .k { font-size: 11px; font-weight: 600; letter-spacing: .2em; line-height: 1.4; text-transform: uppercase; max-width: 14ch; }
+  .grand .photo { position: relative; min-height: 300px; }
+  .grand .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+  .grand .photo::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, var(--red) 0%, rgba(200,16,46,0) 35%); }
+  .grand .eiffel { position: absolute; z-index: 2; right: 18px; bottom: 16px; font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: 22px; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+
+  .note { margin-top: 14px; background: rgba(255,255,255,.05); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 14px; padding: 16px 18px; font-size: 15px; line-height: 1.6; color: var(--muted); }
 
   /* products */
-  .hero-pick { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; border: 1px solid var(--gold); border-radius: var(--radius); padding: 18px 22px; }
-  .hero-pick strong { font-weight: 500; }
-  .hero-pick .eyebrow { font-size: 12px; }
-  h3.group { margin: 34px 0 6px; font-size: 13px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); font-family: "Jost", sans-serif; }
-  .products { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px; }
-  .products li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .products .name { font-weight: 400; }
-  .products .id { display: inline-flex; align-items: center; gap: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--muted); }
-  .copy { font: 500 11px/1 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); background: transparent; border: 1px solid var(--gold-soft); border-radius: 999px; padding: 6px 10px; cursor: pointer; }
-  .copy:hover { border-color: var(--gold); }
-  .copy.done { color: var(--text); border-color: var(--text); }
+  .hero-pick { margin-top: 24px; position: relative; overflow: hidden; border-radius: var(--radius); padding: clamp(20px, 3.5vw, 30px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; background: linear-gradient(90deg, rgba(13,11,12,.92) 30%, rgba(13,11,12,.35)), url("gold-glitter.webp") center 40% / cover; border: 1px solid var(--gold-soft); }
+  .hero-pick > span:first-child { font-size: clamp(19px, 2.2vw, 24px); line-height: 1.3; font-family: "Bodoni Moda", Georgia, serif; max-width: 30ch; }
+  .hero-pick strong { font-weight: 600; color: var(--gold); }
+  .hero-pick .eyebrow { background: var(--red); color: #fff; border-radius: 999px; padding: 8px 14px; }
+  h3.group { margin: 32px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); font-family: "Jost", sans-serif; display: flex; align-items: center; gap: 14px; }
+  h3.group::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .spotlight { list-style: none; margin: 0 0 10px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .spotlight li { min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  .spotlight .img { background: #fff; aspect-ratio: 4 / 3; display: grid; place-items: center; overflow: hidden; }
+  .spotlight .img img { width: 100%; height: 100%; object-fit: contain; padding: 14px; transition: transform .4s ease; }
+  .spotlight li:hover .img img { transform: scale(1.05); }
+  .spotlight .body { min-width: 0; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .spotlight .name { font-weight: 500; color: #fff; line-height: 1.35; }
+
+  .products { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .products li { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 14px; padding: 12px 14px; background: rgba(255,255,255,.035); border: 1px solid var(--line); border-radius: 14px; }
+  .products .name { font-weight: 400; line-height: 1.35; }
+  .products .id { flex-wrap: nowrap; white-space: nowrap; }
+  .id { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; overflow-wrap: anywhere; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--muted); }
+  .copy { font: 600 11px/1 "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); background: var(--gold); border: 0; border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+  .copy:hover { background: var(--gold-2); }
+  .copy.done { background: #fff; }
 
   /* join */
-  .join { margin-top: clamp(56px, 8vw, 96px); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
-  .join h2 em { color: var(--gold); }
-  .join p { margin: 12px 0 0; color: var(--muted); }
-  .join .qr { background: #fff; border-radius: 12px; padding: 10px; width: 180px; }
-  .join .qr-note { margin-top: 8px; font-size: 13px; color: var(--muted); text-align: center; max-width: 180px; }
-  .disclaimer { margin-top: 18px; font-size: 13px; color: rgba(245,242,236,.55); }
+  .join { margin-top: clamp(48px, 6.5vw, 80px); position: relative; overflow: hidden; border-radius: var(--radius); padding: clamp(22px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center; background: linear-gradient(100deg, rgba(23,20,26,.97) 45%, rgba(23,20,26,.7)), url("gold-glitter.webp") right center / cover; border: 1px solid var(--gold-soft); }
+  .join h2 em { font-style: italic; }
+  .join p { margin: 10px 0 0; color: var(--muted); font-size: 17px; }
+  .join .qr { background: #fff; border-radius: 16px; padding: 12px; width: 190px; box-shadow: 0 0 0 6px rgba(214,178,111,.35); }
+  .join .qr-note { margin-top: 12px; font-size: 13px; color: var(--muted); text-align: center; max-width: 190px; }
+  .disclaimer { margin-top: 16px !important; font-size: 13px !important; color: rgba(247,243,236,.55) !important; }
 
-  .site-footer { margin-top: 48px; padding: 24px 20px 44px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 20px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: rgba(245,242,236,.6); }
-  .site-footer .sign { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--gold); }
+  .site-footer { margin-top: 40px; padding: 20px 24px 36px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 20px; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: rgba(247,243,236,.6); }
+  .site-footer .sign { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.3; letter-spacing: 0; text-transform: none; }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     .site-header nav { display: none; }
+    .tiers { grid-template-columns: repeat(2, 1fr); }
+    .tier.bag { grid-column: 1 / -1; }
   }
-  @media (max-width: 760px) {
+  @media (max-width: 820px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .visual { max-width: 360px; order: -1; }
+    .tile.t1 { left: 0; }
     .facts { grid-template-columns: 1fr 1fr; }
-    .facts > div:nth-child(3) { border-left: 0; padding-left: 0; }
-    .facts > div:nth-child(n+3) { border-top: 1px solid var(--line); }
-    .dates { grid-template-columns: 1fr 1fr; row-gap: 26px; }
+    .steps { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: 1fr; gap: 22px; }
+    .timeline::before { left: 10px; right: auto; top: 6px; bottom: 6px; width: 2px; height: auto; background: linear-gradient(180deg, rgba(255,255,255,.25), var(--gold)); }
+    .date { padding: 0 0 0 40px; }
+    .date::before { top: 6px; }
+    .timeline::after { top: 0; left: 8px; width: 6px; height: 120px; background: linear-gradient(180deg, transparent, var(--gold-2), #fff, var(--gold-2), transparent); animation-name: travel-y; }
+    @keyframes travel-y { 0% { top: 0; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { top: calc(100% - 120px); opacity: 0; } }
+    .grand { grid-template-columns: 1fr; }
+    .grand .photo { min-height: 260px; order: -1; }
+    .grand .photo::before { background: linear-gradient(0deg, var(--red) 0%, rgba(200,16,46,0) 45%); }
+    .spotlight { grid-template-columns: 1fr; }
+    .spotlight li { flex-direction: row; }
+    .spotlight .img { width: 120px; flex: none; aspect-ratio: auto; }
     .products { grid-template-columns: 1fr; }
-    .grand, .join { grid-template-columns: 1fr; }
-    .grand .min { border-left: 0; padding-left: 0; border-top: 1px solid rgba(26,24,22,.25); padding-top: 18px; }
+    .join { grid-template-columns: 1fr; background: linear-gradient(180deg, rgba(23,20,26,.96), rgba(23,20,26,.88)), url("gold-glitter.webp") center / cover; }
     .join .qr, .join .qr-note { margin-left: auto; margin-right: auto; }
-    /* prize table becomes stacked rows */
-    .prize-table thead { display: none; }
-    .prize-table, .prize-table tbody, .prize-table tr, .prize-table td { display: block; width: 100%; }
-    .prize-table tr { padding: 16px 0; border-bottom: 1px solid rgba(26,24,22,.14); }
-    .prize-table td { border: 0; padding: 2px 0; }
-    .prize-table td.w, .prize-table td.p { white-space: normal; }
   }
   @media (max-width: 560px) {
     .wrap { padding: 0 16px; }
     .site-header .tag { display: none; }
     .site-header img { width: 104px; }
-    .steps li { grid-template-columns: 38px 1fr; font-size: 16px; }
+    .steps li { padding: 16px 16px 16px 66px; font-size: 15.5px; }
+    .steps .n { left: 14px; top: 14px; width: 38px; height: 38px; font-size: 19px; }
+    .facts > div { padding: 12px 14px; }
+    .facts > div:nth-child(1), .facts > div:nth-child(3) { grid-column: 1 / -1; }
+    .facts > div:nth-child(3) { order: 4; }
+    .facts .v { overflow-wrap: normal; }
+    .products li { grid-template-columns: 1fr; }
+    .pill.solid { letter-spacing: .16em; }
+    .spotlight .img { width: 104px; }
+    .grand .min { gap: 12px; padding: 12px 16px; }
+    .tiers { grid-template-columns: 1fr; }
+    .stamp { width: 96px; }
+    .stamp b { font-size: 22px; }
+    .btn { flex: 1 1 auto; justify-content: center; }
+    .signoff { text-align: left; }
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .tile, .spark, .grand .min, .grand .min::before, .grand .min .big, .grand .min .k, .timeline::after, .date::before { animation: none !important; }
+    .timeline::after { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -186,15 +284,33 @@
 
 <main>
   <div class="hero">
-    <div class="wrap">
-      <div class="meta">
-        <span class="eyebrow">Creator challenge brief</span>
-        <span>TikTok Shop US · Nov 19 – Dec 31</span>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="meta">
+          <span class="eyebrow pill">Creator challenge brief</span>
+          <span>TikTok Shop US · Nov 19 – Dec 31</span>
+        </div>
+        <p style="margin: 26px 0 0;"><span class="eyebrow pill solid">2 creator challenges · Enter both</span></p>
+        <h1 class="serif">Win <em class="gold-text">a Trip to Paris</em></h1>
+        <p class="lede">Post shoppable L'Oréal Paris videos from Nov 19 to Dec 31. Win cash prizes, a designer luxury bag, and be the top GMV driver with $25,000+ to be eligible to win a trip to Paris. All grand prize winners will be announced together on January 5.</p>
+        <div class="cta">
+          <a class="btn primary" href="#prizes">Prizes</a>
+          <a class="btn ghost" href="#join">Join</a>
+        </div>
       </div>
-      <p class="eyebrow" style="margin: 30px 0 0;">2 creator challenges · Enter both</p>
-      <h1 class="serif">Create videos to win <em>a trip to Paris.</em></h1>
-      <p class="lede">Post shoppable L'Oréal Paris videos from Nov 19 to Dec 31. Win cash prizes, a designer luxury bag, and be the top GMV driver with $25,000+ to be eligible to win a trip to Paris. All grand prize winners will be announced together on January 5.</p>
 
+      <div class="visual" aria-hidden="true">
+        <div class="arch"><img src="gold-glitter.webp" alt="" width="900" height="1126"></div>
+        <div class="tile t1"><img src="revitalift-jar.webp" alt="" width="900" height="900"></div>
+        <div class="tile t2"><img src="collagen-serum.webp" alt="" width="900" height="1077"></div>
+        <div class="stamp"><div><b>Paris</b><span>Grand prize</span></div></div>
+        <i class="spark" style="left: 12%; top: 8%;"></i>
+        <i class="spark" style="right: 6%; top: 4%; animation-delay: -1s;"></i>
+        <i class="spark" style="left: 48%; bottom: 0; animation-delay: -1.8s;"></i>
+      </div>
+    </div>
+
+    <div class="wrap">
       <div class="facts">
         <div><div class="v serif">Nov 19 – Dec 31</div><div class="k">Contest dates</div></div>
         <div><div class="v serif">Paris</div><div class="k">Grand prize</div></div>
@@ -205,7 +321,7 @@
   </div>
 
   <section id="qualify" class="wrap">
-    <h2 class="serif"><span class="num">01</span>How to qualify</h2>
+    <div class="sec-head"><span class="num gold-text">01</span><h2 class="serif">How to qualify</h2></div>
     <p class="intro">Hit the minimum each month (November and December) to be eligible for any prize.</p>
     <ol class="steps">
       <li><span class="n">1</span><span><strong>Post 5+ dedicated shoppable videos a month:</strong> at least 2 featuring a priority bundle and 3 featuring priority singles.</span></li>
@@ -216,57 +332,57 @@
   </section>
 
   <section id="dates" class="wrap">
-    <h2 class="serif"><span class="num">02</span>Key dates</h2>
-    <div class="dates">
+    <div class="sec-head"><span class="num gold-text">02</span><h2 class="serif">Key dates</h2></div>
+    <div class="timeline">
       <div class="date"><div class="d">Nov 19</div><div class="l">Challenge opens</div></div>
       <div class="date"><div class="d">Nov 30</div><div class="l">November results close</div></div>
       <div class="date"><div class="d">Dec 31</div><div class="l">Challenge ends</div></div>
       <div class="date last"><div class="d">Jan 5</div><div class="l">All winners announced</div></div>
     </div>
-    <p class="signoff">À vous de jouer.</p>
+    <p class="signoff gold-text">À vous de jouer.</p>
   </section>
 
-  <section id="prizes" class="wrap">
-    <p class="eyebrow" style="margin: 0 0 12px;">Two challenges · Enter both</p>
-    <h2 class="serif">The prizes</h2>
-    <p class="intro">$5,000 in cash prizes, a designer luxury bag, and a chance to win a trip to Paris for the top GMV driver who hits $25,000 or more.</p>
+  <div class="prizes-band">
+    <section id="prizes" class="wrap">
+      <p class="eyebrow" style="margin: 0 0 12px;">Two challenges · Enter both</p>
+      <h2 class="serif">The prizes</h2>
+      <p class="intro">$5,000 in cash prizes, a designer luxury bag, and a chance to win a trip to Paris for the top GMV driver who hits $25,000 or more.</p>
 
-    <div class="card">
-      <div class="card-head">
-        <span class="eyebrow" style="flex-basis: 100%;">Challenge 01</span>
-        <h3 class="serif">Cash prizes &amp; designer luxury bag</h3>
-        <span class="amount">$5,000 cash</span>
+      <div class="card">
+        <div class="card-head">
+          <span class="eyebrow" style="flex-basis: 100%;">Challenge 01</span>
+          <h3 class="serif">Cash prizes &amp; designer luxury bag</h3>
+          <span class="amount">$5,000 cash</span>
+        </div>
+        <p>Cash tiers are won on GMV from November through December. 24 winners in total, all announced Jan 5.</p>
+        <ul class="tiers">
+          <li class="tier"><span class="p">$100</span><span class="w">10 winners</span><span class="h">First 10 creators to hit $250 in GMV</span></li>
+          <li class="tier"><span class="p">$200</span><span class="w">10 winners</span><span class="h">First 10 creators to hit $500 in GMV</span></li>
+          <li class="tier"><span class="p">$500</span><span class="w">2 winners</span><span class="h">The #1 and #2 GMV drivers of December</span></li>
+          <li class="tier"><span class="p">$1,000</span><span class="w">1 winner</span><span class="h">Top GMV driver, Nov 19 – Dec 31. Must drive more than $1K in GMV.</span></li>
+          <li class="tier bag"><span class="p">Designer Luxury Bag</span><span class="w">1 winner</span><span class="h">#2 GMV driver, Nov 19 – Dec 31, or the #1 GMV driver if the trip to Paris isn't awarded. Min. $5,000 GMV to win.</span></li>
+        </ul>
       </div>
-      <p>Cash tiers are won on GMV from November through December. 24 winners in total, all announced Jan 5.</p>
-      <table class="prize-table">
-        <thead><tr><th>Prize</th><th>Winners</th><th>How to win</th></tr></thead>
-        <tbody>
-          <tr><td class="p">$100</td><td class="w">10 winners</td><td class="h">First 10 creators to hit $250 in GMV</td></tr>
-          <tr><td class="p">$200</td><td class="w">10 winners</td><td class="h">First 10 creators to hit $500 in GMV</td></tr>
-          <tr><td class="p">$500</td><td class="w">2 winners</td><td class="h">The #1 and #2 GMV drivers of December</td></tr>
-          <tr><td class="p">$1,000</td><td class="w">1 winner</td><td class="h">Top GMV driver, Nov 19 – Dec 31. Must drive more than $1K in GMV.</td></tr>
-          <tr><td class="p">Bag</td><td class="w">1 winner</td><td class="h">Designer luxury bag · #2 GMV driver, Nov 19 – Dec 31, or the #1 GMV driver if the trip to Paris isn't awarded. Min. $5,000 GMV to win.</td></tr>
-        </tbody>
-      </table>
-    </div>
 
-    <div class="card grand">
-      <div>
-        <span class="eyebrow">Challenge 02 · Grand prize</span>
-        <h3 class="serif">A trip to <em>Paris</em></h3>
-        <p>The creator with the highest GMV from Nov 19 to Dec 31 wins the trip, as long as they drive at least $25,000. The winner is announced with all winners on Jan 5. Full trip details to come.</p>
+      <div class="grand">
+        <div class="copy-side">
+          <span class="eyebrow">Challenge 02 · Grand prize</span>
+          <h3 class="serif">A trip to <em>Paris</em></h3>
+          <p>The creator with the highest GMV from Nov 19 to Dec 31 wins the trip, as long as they drive at least $25,000. The winner is announced with all winners on Jan 5. Full trip details to come.</p>
+          <div class="min">
+            <div class="big">$25K</div>
+            <div class="k">Minimum GMV to win</div>
+          </div>
+        </div>
+        <div class="photo"><img src="paris-campaign.webp" alt="" width="900" height="1351" loading="lazy"></div>
       </div>
-      <div class="min">
-        <div class="big">$25K</div>
-        <div class="k">Minimum GMV to win</div>
-      </div>
-    </div>
-    <p class="note">If the top GMV creator drives $25,000 or more, they will be eligible to win the trip to Paris, and the designer luxury bag will be awarded to the next top performer. If the top GMV creator drives under $25,000, they will be eligible to win the designer luxury bag, and the trip to Paris will not be awarded. Creators can win only one of the $100, $200 or $1,000 cash prizes. Creators can win both a cash prize and the trip to Paris.</p>
-    <p class="signoff">Bonne chance.</p>
-  </section>
+      <p class="note">If the top GMV creator drives $25,000 or more, they will be eligible to win the trip to Paris, and the designer luxury bag will be awarded to the next top performer. If the top GMV creator drives under $25,000, they will be eligible to win the designer luxury bag, and the trip to Paris will not be awarded. Creators can win only one of the $100, $200 or $1,000 cash prizes. Creators can win both a cash prize and the trip to Paris.</p>
+      <p class="signoff gold-text">Bonne chance.</p>
+    </section>
+  </div>
 
   <section id="products" class="wrap">
-    <h2 class="serif"><span class="num">03</span>Priority products</h2>
+    <div class="sec-head"><span class="num gold-text">03</span><h2 class="serif">Priority products</h2></div>
     <p class="intro">Your 2 bundle and 3 single videos come from this list. Search the product ID in TikTok Shop to add it to your showcase.</p>
 
     <div class="hero-pick">
@@ -284,10 +400,13 @@
     </ul>
 
     <h3 class="group">Singles · Post at least 3</h3>
+    <ul class="spotlight">
+      <li><div class="img"><img src="revitalift-jar.webp" alt="Revitalift Triple Power Moisturizer jar" width="900" height="900" loading="lazy"></div><div class="body"><span class="name">Revitalift Triple Power Moisturizer</span><span class="id">1729388659727176301</span></div></li>
+      <li><div class="img"><img src="midnight-cream-jar.webp" alt="Age Perfect Cell Renewal Midnight Cream jar" width="612" height="611" loading="lazy"></div><div class="body"><span class="name">Age Perfect Cell Renewal Midnight Cream</span><span class="id">1729388737037046381</span></div></li>
+      <li><div class="img"><img src="collagen-serum.webp" alt="Collagen Moisture Bounce Serum bottle" width="900" height="1077" loading="lazy"></div><div class="body"><span class="name">Collagen Moisture Bounce Serum</span><span class="id">1731296992532075117</span></div></li>
+    </ul>
     <ul class="products">
       <li><span class="name">True Match Hyaluron Tinted Balm Foundation</span><span class="id">1732592650071216749</span></li>
-      <li><span class="name">Revitalift Triple Power Moisturizer</span><span class="id">1729388659727176301</span></li>
-      <li><span class="name">Age Perfect Cell Renewal Midnight Cream</span><span class="id">1729388737037046381</span></li>
       <li><span class="name">Plump Ambition Infinite Lights Lip Oil</span><span class="id">1729505252659140205</span></li>
       <li><span class="name">True Match Lumi Glotion</span><span class="id">1729400402831970925</span></li>
       <li><span class="name">Iron Sleek Coat Smoothing Treatment</span><span class="id">1732197978998018669</span></li>
@@ -297,7 +416,6 @@
       <li><span class="name">Infallible Blur-fection Setting Powder</span><span class="id">1730518820142486125</span></li>
       <li><span class="name">Plump Ambition pH Hyaluron Lip Oil</span><span class="id">1731196130042352237</span></li>
       <li><span class="name">Infallible Cushion Foundation</span><span class="id">1732356124784562797</span></li>
-      <li><span class="name">Collagen Moisture Bounce Serum</span><span class="id">1731296992532075117</span></li>
       <li><span class="name">True Match Hyaluron Tinted Balm Embellisher</span><span class="id">1732523196091241069</span></li>
       <li><span class="name">Blurfiller Blurring Lip Contour</span><span class="id">1732149619077321325</span></li>
       <li><span class="name">Collagen Daily Face Moisturizer</span><span class="id">1731673086761931373</span></li>
@@ -311,7 +429,7 @@
   <div id="join" class="wrap" style="scroll-margin-top: 76px;">
     <div class="join">
       <div>
-        <h2 class="serif">Ready? <em>Join the challenge on Lark.</em></h2>
+        <h2 class="serif">Ready? <em class="gold-text">Join the challenge on Lark.</em></h2>
         <p>Scan the QR code to join the L'Oréal Paris Creator Community group.</p>
         <p class="disclaimer">Disclaimer: These contests are run solely by Overcast Digital. They are not sponsored, endorsed, or administered by, and have no affiliation with, L'Oréal Paris or L'Oréal USA.</p>
       </div>
@@ -325,12 +443,12 @@
 
 <footer class="wrap site-footer">
   <span>L'Oréal Paris × Overcast Creators</span>
-  <span class="sign">Merci, créateurs.</span>
+  <span class="sign gold-text">Merci, créateurs.</span>
 </footer>
 
 <script>
   // Tap-to-copy product IDs, so creators can paste them into TikTok Shop search.
-  document.querySelectorAll(".products .id").forEach(function (el) {
+  document.querySelectorAll("#products .id").forEach(function (el) {
     var id = el.textContent.trim();
     var btn = document.createElement("button");
     btn.type = "button";
