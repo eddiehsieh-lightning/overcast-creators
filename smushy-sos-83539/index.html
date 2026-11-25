@@ -58,7 +58,7 @@
   .site-header nav a:hover { color: var(--lilac); }
 
   /* hero */
-  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(48px, 6vw, 80px); }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(8px, 2vw, 24px); }
   .new { font-family: "Poppins", sans-serif; font-style: italic; font-weight: 500; font-size: clamp(26px, 3vw, 36px); color: var(--white); transform: rotate(-10deg); display: inline-block; text-shadow: 1px 1px 0 var(--purple-deep); }
   .hero h1 { margin: 6px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(76px, 12vw, 150px); line-height: .85; color: var(--white);
     text-shadow: 0 3px 0 #e9defc, 0 6px 0 #b79ae8, 0 18px 40px rgba(75,21,128,.35); }
@@ -82,12 +82,14 @@
   .checks b { font-weight: 700; color: var(--purple); }
 
   /* about */
-  .about { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 20px; align-items: center; }
-  .about .panel { padding: clamp(24px, 3.4vw, 36px); }
+  .about { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 20px; align-items: stretch; }
+  .about .panel { padding: clamp(24px, 3.4vw, 36px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
   .about .price { display: inline-block; margin-bottom: 20px; font-weight: 700; font-size: 18px; background: var(--ink); color: var(--white); border-radius: 999px; padding: 6px 16px; }
   .visuals { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
-  .visuals figure { margin: 0; border-radius: var(--radius); overflow: hidden; background: rgba(255,255,255,.4); display: flex; flex-direction: column; }
-  .visuals img { width: 100%; height: 100%; object-fit: cover; }
+  .visuals figure { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--white); display: flex; flex-direction: column; }
+  .visuals figcaption { flex: 1; display: grid; place-items: center; }
+  .visuals img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
+  #about { padding-top: clamp(40px, 5vw, 64px); }
   .visuals figcaption { padding: 10px 12px; font-size: 13px; font-weight: 600; text-align: center; background: var(--white); }
 
   /* brief at a glance */
@@ -101,7 +103,7 @@
   /* shades + liners */
   .shades { margin-top: 32px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
   .shade { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 6px 0 var(--purple-deep); display: flex; flex-direction: column; }
-  .shade img { width: 100%; aspect-ratio: 148 / 210; object-fit: cover; background: var(--lilac-pale); }
+  .shade img { width: 100%; aspect-ratio: 768 / 652; object-fit: cover; background: var(--lilac-pale); }
   .shade .body { padding: 14px 16px 16px; display: grid; gap: 8px; }
   .shade h3 { font-size: 17px; }
   .liner { font-size: 13px; line-height: 1.35; color: var(--muted); border-top: 1px dashed rgba(27,11,46,.2); padding-top: 8px; }
@@ -276,14 +278,14 @@
     <h2 class="puffy">Shades &amp; liner pairings</h2>
     <p class="intro">8 spa-inspired scents and glossy shades, each with its Slim Lip Pencil match. Say the full shade name in your video.</p>
     <div class="shades">
-      <article class="shade"><img src="shade-green-serenitea.webp" alt="Smushy SOS! Green Sereni-tea" width="146" height="228" loading="lazy"><div class="body"><h3>Green Sereni-tea</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Nude Beige</div></div></article>
-      <article class="shade"><img src="shade-shea-so-smooth.webp" alt="Smushy SOS! Shea So Smooth" width="146" height="228" loading="lazy"><div class="body"><h3>Shea So Smooth</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Natural</div></div></article>
-      <article class="shade"><img src="shade-peachy-pamper.webp" alt="Smushy SOS! Peachy Pamper" width="154" height="228" loading="lazy"><div class="body"><h3>Peachy Pamper</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Peakaboo Neutral</div></div></article>
-      <article class="shade"><img src="shade-lavender-soother.webp" alt="Smushy SOS! Lavender Soother" width="150" height="206" loading="lazy"><div class="body"><h3>Lavender Soother</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Mauve</div></div></article>
-      <article class="shade"><img src="shade-rose-recharge.webp" alt="Smushy SOS! Rose Recharge" width="148" height="206" loading="lazy"><div class="body"><h3>Rose Recharge</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Ever</div></div></article>
-      <article class="shade"><img src="shade-guava-glaze.webp" alt="Smushy SOS! Guava Glaze" width="148" height="206" loading="lazy"><div class="body"><h3>Guava Glaze</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Nude Pink</div></div></article>
-      <article class="shade"><img src="shade-red-y-2-chill.webp" alt="Smushy SOS! Red-y 2 Chill" width="148" height="210" loading="lazy"><div class="body"><h3>Red-y 2 Chill</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Hot Red</div></div></article>
-      <article class="shade"><img src="shade-coconut-calm.webp" alt="Smushy SOS! Coconut Calm" width="158" height="210" loading="lazy"><div class="body"><h3>Coconut Calm</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Espresso</div></div></article>
+      <article class="shade"><img src="shade-green-serenitea.webp" alt="Smushy SOS! Green Sereni-tea" width="768" height="652" loading="lazy"><div class="body"><h3>Green Sereni-tea</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Nude Beige</div></div></article>
+      <article class="shade"><img src="shade-shea-so-smooth.webp" alt="Smushy SOS! Shea So Smooth" width="768" height="652" loading="lazy"><div class="body"><h3>Shea So Smooth</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Natural</div></div></article>
+      <article class="shade"><img src="shade-peachy-pamper.webp" alt="Smushy SOS! Peachy Pamper" width="768" height="652" loading="lazy"><div class="body"><h3>Peachy Pamper</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Peekaboo Neutral</div></div></article>
+      <article class="shade"><img src="shade-lavender-soother.webp" alt="Smushy SOS! Lavender Soother" width="768" height="652" loading="lazy"><div class="body"><h3>Lavender Soother</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Mauve</div></div></article>
+      <article class="shade"><img src="shade-rose-recharge.webp" alt="Smushy SOS! Rose Recharge" width="768" height="652" loading="lazy"><div class="body"><h3>Rose Recharge</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Ever</div></div></article>
+      <article class="shade"><img src="shade-guava-glaze.webp" alt="Smushy SOS! Guava Glaze" width="768" height="652" loading="lazy"><div class="body"><h3>Guava Glaze</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Nude Pink</div></div></article>
+      <article class="shade"><img src="shade-red-y-2-chill.webp" alt="Smushy SOS! Red-y 2 Chill" width="768" height="652" loading="lazy"><div class="body"><h3>Red-y 2 Chill</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Hot Red</div></div></article>
+      <article class="shade"><img src="shade-coconut-calm.webp" alt="Smushy SOS! Coconut Calm" width="768" height="652" loading="lazy"><div class="body"><h3>Coconut Calm</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Espresso</div></div></article>
     </div>
   </section>
 
