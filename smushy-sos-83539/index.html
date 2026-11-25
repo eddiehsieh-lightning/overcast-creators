@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Smushy SOS! · Creator brief · Overcast Creators</title>
+<meta name="description" content="Creator brief for NYX Professional Makeup Smushy SOS! Hydrating Lip Mask: claims, 8 shades and liner pairings, hooks, filming do's and don'ts, disclosures and video specs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --lilac: #c9b6f2;
+    --lilac-pale: #efe8ff;
+    --violet: #8c4fe0;
+    --purple: #a21ce8;
+    --purple-deep: #4b1580;
+    --pink: #e0479a;
+    --pink-hot: #ff3fa4;
+    --mint: #9ff0ea;
+    --yellow: #fff23a;
+    --ink: #1b0b2e;
+    --white: #ffffff;
+    --muted: rgba(27, 11, 46, .72);
+    --radius: 22px;
+    --max: 1140px;
+    --display: "Bagel Fat One", "Arial Black", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; color: var(--ink); font-family: "Poppins", system-ui, -apple-system, sans-serif;
+    font-weight: 400; font-size: 16px; line-height: 1.6; text-wrap: pretty;
+    background: var(--lilac) linear-gradient(180deg, #ddd0fb 0%, #c4aff3 35%, #b08de9 75%, #9b6be2 100%) fixed;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--purple); }
+  :focus-visible { outline: 3px solid var(--pink-hot); outline-offset: 3px; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* puffy headings, like the brief */
+  .puffy { font-family: var(--display); font-weight: 400; color: var(--purple); line-height: .95; letter-spacing: .01em;
+    text-shadow: 0 2px 0 #d27bff, 0 4px 0 var(--purple-deep), 0 10px 24px rgba(75,21,128,.25); }
+  h2.puffy { margin: 0; font-size: clamp(40px, 6vw, 72px); }
+  h3 { margin: 0; font-weight: 700; line-height: 1.2; }
+  .eyebrow { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+  .intro { margin: 14px 0 0; max-width: 62ch; color: var(--muted); font-size: 17px; }
+
+  /* header: mirrors the nyxcosmetics.com top bar */
+  .site-header { position: sticky; top: 0; z-index: 50; background: #000; color: #fff; }
+  .site-header .bar { position: relative; display: flex; align-items: center; justify-content: center; min-height: 96px; }
+  .site-header .logo img { width: 200px; }
+  .site-header .tag { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); border: 1px solid #fff; padding: 9px 14px; font-size: 13px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  .site-header .tag b { color: var(--lilac); font-weight: 700; }
+  .site-header nav { display: flex; gap: clamp(20px, 3vw, 40px); padding-bottom: 18px; }
+  .site-header nav a { color: #fff; font-size: 16px; font-weight: 700; letter-spacing: .01em; text-transform: uppercase; text-decoration: none; }
+  .site-header nav a:hover { color: var(--lilac); }
+
+  /* hero */
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; padding-top: clamp(36px, 5vw, 64px); padding-bottom: clamp(48px, 6vw, 80px); }
+  .new { font-family: "Poppins", sans-serif; font-style: italic; font-weight: 500; font-size: clamp(26px, 3vw, 36px); color: var(--white); transform: rotate(-10deg); display: inline-block; text-shadow: 1px 1px 0 var(--purple-deep); }
+  .hero h1 { margin: 6px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(76px, 12vw, 150px); line-height: .85; color: var(--white);
+    text-shadow: 0 3px 0 #e9defc, 0 6px 0 #b79ae8, 0 18px 40px rgba(75,21,128,.35); }
+  .sos { display: inline-block; margin: 6px 0 0 50%; font-family: var(--display); font-size: clamp(30px, 4.4vw, 52px); line-height: 1; padding: 6px 16px 10px; border-radius: 16px; color: var(--mint); background: linear-gradient(180deg, #f6e9ff, #c9a9f5); box-shadow: 0 4px 0 #8f63d6, 0 10px 20px rgba(75,21,128,.3); transform: rotate(-4deg); text-shadow: 0 2px 0 #3aa7a0; }
+  .hero .sub { margin-top: 18px; font-size: clamp(18px, 2.3vw, 26px); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--white); text-shadow: 0 2px 10px rgba(75,21,128,.35); }
+  .hero .lede { margin: 16px 0 0; max-width: 42ch; font-size: 18px; color: var(--ink); }
+  .facts { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .fact { display: flex; align-items: center; gap: 10px; background: var(--white); border-radius: 14px; padding: 10px 16px; box-shadow: 0 6px 0 var(--purple-deep); }
+  .fact .k { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--purple); }
+  .fact .v { font-weight: 700; font-size: 18px; }
+  .fact.launch { background: var(--yellow); border: 2px solid var(--ink); }
+  .badges { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .badges span { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: rgba(255,255,255,.7); border: 1px solid rgba(27,11,46,.25); border-radius: 8px; padding: 6px 10px; }
+  .hero-media img { width: 100%; border-radius: 28px; border: 5px solid var(--white); box-shadow: 0 14px 0 var(--purple-deep), 0 30px 60px rgba(75,21,128,.35); }
+
+  section.wrap { padding-top: clamp(64px, 8vw, 104px); scroll-margin-top: 150px; }
+  .panel { background: rgba(255,255,255,.82); border-radius: var(--radius); box-shadow: 0 8px 0 var(--purple-deep); }
+  .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .checks li { position: relative; padding-left: 38px; font-weight: 500; }
+  .checks li::before { content: ""; position: absolute; left: 0; top: .1em; width: 26px; height: 26px; border-radius: 50%; background: var(--purple) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 16px no-repeat; }
+  .checks b { font-weight: 700; color: var(--purple); }
+
+  /* about */
+  .about { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 20px; align-items: center; }
+  .about .panel { padding: clamp(24px, 3.4vw, 36px); }
+  .about .price { display: inline-block; margin-bottom: 20px; font-weight: 700; font-size: 18px; background: var(--ink); color: var(--white); border-radius: 999px; padding: 6px 16px; }
+  .visuals { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+  .visuals figure { margin: 0; border-radius: var(--radius); overflow: hidden; background: rgba(255,255,255,.4); display: flex; flex-direction: column; }
+  .visuals img { width: 100%; height: 100%; object-fit: cover; }
+  .visuals figcaption { padding: 10px 12px; font-size: 13px; font-weight: 600; text-align: center; background: var(--white); }
+
+  /* brief at a glance */
+  .glance { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .glance .panel { padding: clamp(22px, 3vw, 32px); }
+  .glance .label { font-family: var(--display); font-size: clamp(26px, 3vw, 34px); color: var(--purple); line-height: 1; }
+  .glance p { margin: 12px 0 0; font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; }
+  .claims { grid-column: 1 / -1; }
+  .claims .checks { margin-top: 18px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 32px; }
+
+  /* shades + liners */
+  .shades { margin-top: 32px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .shade { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 6px 0 var(--purple-deep); display: flex; flex-direction: column; }
+  .shade img { width: 100%; aspect-ratio: 148 / 210; object-fit: cover; background: var(--lilac-pale); }
+  .shade .body { padding: 14px 16px 16px; display: grid; gap: 8px; }
+  .shade h3 { font-size: 17px; }
+  .liner { font-size: 13px; line-height: 1.35; color: var(--muted); border-top: 1px dashed rgba(27,11,46,.2); padding-top: 8px; }
+  .liner b { display: block; color: var(--pink); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+
+  /* hooks */
+  .hooks { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 32px; align-items: center; }
+  .tip { padding: 18px 22px; border-radius: 16px; background: var(--ink); color: var(--white); font-size: 15px; }
+  .tip b { color: var(--mint); }
+  .tip mark { background: var(--pink-hot); color: var(--white); padding: 0 4px; border-radius: 4px; }
+  .hook-list { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: hook; }
+  .hook-list li { counter-increment: hook; display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 14px; align-items: center; background: var(--white); border-radius: 16px; padding: 12px 18px 12px 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .01em; box-shadow: 0 5px 0 var(--purple-deep); }
+  .hook-list li::before { content: counter(hook); display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--purple); color: var(--white); font-family: var(--display); font-size: 20px; }
+  .hooks .tag-hl { color: var(--mint); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 14px; margin-top: 22px; display: inline-block; background: var(--ink); border-radius: 999px; padding: 6px 14px; }
+  .hooks figure { margin: 0; width: 100%; max-width: 340px; justify-self: center; }
+  .hooks figure img { width: 100%; border-radius: 28px; border: 5px solid var(--white); box-shadow: 0 10px 0 var(--purple-deep); }
+
+  /* do / don't */
+  .rules { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  .rule { border-radius: var(--radius); padding: clamp(22px, 3vw, 32px); }
+  .rule.do { background: rgba(255,255,255,.86); box-shadow: 0 8px 0 var(--purple-deep); }
+  .rule.dont { background: #cf4b8b; color: var(--white); box-shadow: 0 8px 0 #6d1844; }
+  .rule h3 { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 400; font-size: clamp(28px, 3.4vw, 38px); line-height: 1; }
+  .rule.do h3 { color: var(--purple); }
+  .rule h3 .ic { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; font-family: "Poppins", sans-serif; font-weight: 700; font-size: 20px; color: #fff; }
+  .rule.do .ic { background: #3fa63c; }
+  .rule.dont .ic { background: #c8281c; border: 2px solid #fff; }
+  .rule h4 { margin: 24px 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+  .rule.do h4 { color: var(--pink); }
+  .rule ul { margin: 0; padding-left: 20px; display: grid; gap: 10px; }
+  .rule .note { margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--lilac-pale); font-weight: 500; }
+  .rule.dont ul { list-style: none; padding: 0; gap: 0; }
+  .rule.dont li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.25); font-weight: 500; }
+  .rule.dont li:last-child { border-bottom: 0; padding-bottom: 0; }
+
+  /* disclosures */
+  .disc { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+  .disc .panel { padding: clamp(22px, 3vw, 32px); }
+  .disc h3 { font-size: 20px; color: var(--purple); }
+  .copyrow { margin-top: 16px; display: grid; gap: 10px; }
+  .copy { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--lilac-pale); border-radius: 12px; padding: 10px 14px; }
+  .copy .k { flex-basis: 100%; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .copy .v { flex: 1; min-width: 0; font-weight: 700; overflow-wrap: break-word; }
+  button.cp { font: 600 11px/1 "Poppins", sans-serif; letter-spacing: .1em; text-transform: uppercase; border: 0; border-radius: 999px; padding: 8px 12px; background: var(--ink); color: var(--white); cursor: pointer; }
+  .examples { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+  .examples figure { margin: 0; background: var(--white); border-radius: var(--radius); padding: 12px; box-shadow: 0 6px 0 var(--purple-deep); }
+  .examples img { width: 100%; aspect-ratio: 9 / 15; object-fit: cover; border-radius: 12px; }
+  .examples figcaption { margin-top: 10px; font-size: 13px; font-weight: 600; text-align: center; }
+
+  /* specs */
+  .specs { margin-top: 32px; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(20px, 4vw, 48px); align-items: center; }
+  .phones { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+  .phones figure { margin: 0; }
+  .phones img { width: 100%; border-radius: 26px; box-shadow: 0 8px 0 var(--purple-deep); }
+  .phones figcaption { margin-top: 12px; text-align: center; font-size: 13px; font-weight: 600; }
+  .spec-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .spec-list li { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 16px; background: rgba(255,255,255,.82); border-radius: 16px; padding: 14px 18px; }
+  .spec-list b { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--purple); padding-top: 3px; }
+
+  .thanks { margin-top: clamp(72px, 9vw, 112px); text-align: center; }
+  .thanks .puffy { font-size: clamp(54px, 10vw, 120px); }
+  .site-footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 40px; padding-bottom: 40px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.9); }
+
+  @media (max-width: 960px) {
+    .site-header nav, .site-header .tag { display: none; }
+    .site-header .bar { min-height: 76px; }
+    .site-header .logo img { width: 150px; }
+    section.wrap { scroll-margin-top: 90px; }
+    .hero .wrap, .about, .hooks, .rules, .disc, .specs { grid-template-columns: minmax(0, 1fr); }
+    .shades { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hooks figure { max-width: 300px; justify-self: start; }
+  }
+  @media (max-width: 620px) {
+    .glance, .claims .checks { grid-template-columns: minmax(0, 1fr); }
+    .spec-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+    .shades { gap: 12px; }
+    .shade .body { padding: 12px; }
+    .shade h3 { font-size: 15px; }
+    .hook-list li { grid-template-columns: 36px minmax(0, 1fr); font-size: 14px; }
+    .hook-list li::before { width: 36px; height: 36px; font-size: 17px; }
+    .copy .v { flex-basis: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body id="top">
+
+<header class="site-header">
+  <div class="wrap bar">
+    <span class="tag">Creator brief · <b>Smushy SOS!</b></span>
+    <a class="logo" href="#top" aria-label="NYX Professional Makeup, back to top"><img src="nyx-logo.png" alt="NYX Professional Makeup" width="238" height="69"></a>
+  </div>
+  <div class="wrap">
+    <nav aria-label="Brief sections">
+      <a href="#about">About</a>
+      <a href="#shades">Shades</a>
+      <a href="#hooks">Hooks</a>
+      <a href="#filming">Do's &amp; don'ts</a>
+      <a href="#disclosures">Disclosures</a>
+      <a href="#specs">Video specs</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="new">New!</span>
+        <h1>Smushy<span class="sos">SOS!</span></h1>
+        <div class="sub">Hydrating Lip Mask</div>
+        <p class="lede">Day &amp; night 12 HR hydration in 8 shades &amp; scents. All the care of a lip mask. All the color &amp; shine of a gloss.</p>
+        <div class="facts">
+          <div class="fact launch"><span class="k">Launch date</span><span class="v">7/29</span></div>
+          <div class="fact"><span class="k">Price</span><span class="v">$13</span></div>
+        </div>
+        <div class="badges"><span>Vegan formula</span><span>Cruelty free</span><span>No makeup retouching</span></div>
+      </div>
+      <div class="hero-media">
+        <img src="hero-models.webp" alt="Two models in nurse-style caps holding Smushy SOS! lip masks, with the product and its custom-hole silicone applicator" width="540" height="710" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="wrap">
+    <h2 class="puffy">About</h2>
+    <div class="about">
+      <div class="panel">
+        <span class="price">Price: $13</span>
+        <ul class="checks">
+          <li><b>Hydration:</b> 12-hour hydrating lip mask</li>
+          <li>Formulated with hyaluronic acid.</li>
+          <li><b>Wear:</b> All the care of a lip mask. All the color &amp; shine of a gloss.</li>
+          <li><b>Unique scents:</b> Available in 8 soothing spa-inspired scents &amp; glossy shades.</li>
+        </ul>
+      </div>
+      <div class="visuals">
+        <figure>
+          <img src="before-after.webp" alt="Lips before and after Smushy SOS!: dry and matte before, glossy and smooth after" width="225" height="290" loading="lazy">
+          <figcaption>Before → after</figcaption>
+        </figure>
+        <figure>
+          <img src="smushy-pack.webp" alt="Smushy SOS! Hydrating Lip Mask, 0.03 fl. oz. / 1 mL" width="250" height="483" loading="lazy">
+          <figcaption>Ft. custom-hole silicone applicator!</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="glance">
+      <div class="panel">
+        <div class="label">Main objective</div>
+        <p>Drive GMV through Smushy SOS sales.</p>
+      </div>
+      <div class="panel">
+        <div class="label">Main message</div>
+        <p>Day &amp; night 12 HR hydration in 8 shades &amp; scents</p>
+      </div>
+      <div class="panel claims">
+        <div class="label">Claims</div>
+        <ul class="checks">
+          <li>12-hour continuous hydration &amp; all-day comfort</li>
+          <li>Instant high-shine &amp; buildable color (perfect for on-camera swatches)</li>
+          <li>Lips stay soft, smooth &amp; healthy even after product wears off</li>
+          <li>Lightweight &amp; lightning-fast application with zero effort</li>
+          <li>Instantly smooths &amp; revives dry lips on contact</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="shades" class="wrap">
+    <h2 class="puffy">Shades &amp; liner pairings</h2>
+    <p class="intro">8 spa-inspired scents and glossy shades, each with its Slim Lip Pencil match. Say the full shade name in your video.</p>
+    <div class="shades">
+      <article class="shade"><img src="shade-green-serenitea.webp" alt="Smushy SOS! Green Sereni-tea" width="146" height="228" loading="lazy"><div class="body"><h3>Green Sereni-tea</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Nude Beige</div></div></article>
+      <article class="shade"><img src="shade-shea-so-smooth.webp" alt="Smushy SOS! Shea So Smooth" width="146" height="228" loading="lazy"><div class="body"><h3>Shea So Smooth</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Natural</div></div></article>
+      <article class="shade"><img src="shade-peachy-pamper.webp" alt="Smushy SOS! Peachy Pamper" width="154" height="228" loading="lazy"><div class="body"><h3>Peachy Pamper</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Peakaboo Neutral</div></div></article>
+      <article class="shade"><img src="shade-lavender-soother.webp" alt="Smushy SOS! Lavender Soother" width="150" height="206" loading="lazy"><div class="body"><h3>Lavender Soother</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Mauve</div></div></article>
+      <article class="shade"><img src="shade-rose-recharge.webp" alt="Smushy SOS! Rose Recharge" width="148" height="206" loading="lazy"><div class="body"><h3>Rose Recharge</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Ever</div></div></article>
+      <article class="shade"><img src="shade-guava-glaze.webp" alt="Smushy SOS! Guava Glaze" width="148" height="206" loading="lazy"><div class="body"><h3>Guava Glaze</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Nude Pink</div></div></article>
+      <article class="shade"><img src="shade-red-y-2-chill.webp" alt="Smushy SOS! Red-y 2 Chill" width="148" height="210" loading="lazy"><div class="body"><h3>Red-y 2 Chill</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Hot Red</div></div></article>
+      <article class="shade"><img src="shade-coconut-calm.webp" alt="Smushy SOS! Coconut Calm" width="158" height="210" loading="lazy"><div class="body"><h3>Coconut Calm</h3><div class="liner"><b>Liner pairing</b>Slim Lip Pencil Espresso</div></div></article>
+    </div>
+  </section>
+
+  <section id="hooks" class="wrap">
+    <h2 class="puffy">Hook ideas</h2>
+    <div class="hooks">
+      <div>
+        <p class="tip"><b>Content tip:</b> Add a strong, impactful hook in the first 3 seconds of your video to <mark>drive video views</mark> &amp; GMV! Write it as a text overlay at the beginning of the video too to capture the attention of your audience!</p>
+        <span class="tag-hl">Hydrating lip mask</span>
+        <ol class="hook-list">
+          <li>“If your lips are flaky and dry right now, you need to watch this”</li>
+          <li>“Don’t blink or you’ll miss this 2 second lip transformation”</li>
+          <li>“This is your sign to throw away your basic lip balms.”</li>
+          <li>“Stop buying lip balms that are drying out your lips.”</li>
+          <li>“Let’s test out this 12-hour hydration claim.”</li>
+          <li>“Which spa scent would you pick?”</li>
+          <li>“Is this a gloss or a lip mask… let’s find out”</li>
+        </ol>
+      </div>
+      <figure>
+        <img src="hooks-model.webp" alt="Model in a nurse cap applying Smushy SOS! with its silicone applicator" width="240" height="260" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section id="filming" class="wrap">
+    <h2 class="puffy">Filming do's &amp; don'ts</h2>
+    <div class="rules">
+      <div class="rule do">
+        <h3><span class="ic" aria-hidden="true">✓</span>Filming do's</h3>
+        <h4>Mandatory disclosure</h4>
+        <p style="margin:0">Include the correct overlay and caption to be eligible for media sparking:</p>
+        <ul style="margin-top:10px">
+          <li><b>In Video:</b> NYX Cosmetics Partner must be added as a text overlay for the duration of the video</li>
+          <li><b>Caption:</b> #NYXCosmeticsPartner @nyxcosmetics</li>
+        </ul>
+        <p class="note">Any reference to the brand must be NYX Professional Makeup – not ‘NYX’. ‘NYX’ is pronounced “Nicks”.</p>
+        <h4>Content do's</h4>
+        <ul>
+          <li>Only include honest and truthful experiences with the products</li>
+          <li>Use the inverted filter so product name is readable on screen</li>
+          <li>Specify what shade you are wearing.</li>
+          <li>Make sure all content is in focus (not blurry), and all products are represented in a positive way — no smudges, rips, or dents in packaging, etc. All products should be clearly in focus, well lit, NOT upside down</li>
+          <li>Remove all stickers / barcodes from product</li>
+          <li>Include an original VO recording, or licensed music provided by the brand</li>
+          <li>Shoot content from a straight on, front facing angle in a well lit area</li>
+          <li>Show the product in front of the camera before application</li>
+          <li>Please make sure all content is high-res</li>
+        </ul>
+      </div>
+      <div class="rule dont">
+        <h3><span class="ic" aria-hidden="true">✕</span>Filming don'ts</h3>
+        <ul>
+          <li>Do not refer to brand as “NYX,” only “NYX Professional Makeup”</li>
+          <li>No comparison to a medical procedure (lip filler, face lift etc)</li>
+          <li>No distracting backgrounds, keep clean and simple</li>
+          <li>No branded clothing or clothing with visible logos</li>
+          <li>DO NOT call out, mention or feature any products that are not NYX Professional Makeup. You will need to use NYX PMU for ALL products called out, mentioned, or featured within the video.</li>
+          <li>No Filters, color effects or excessive retouching</li>
+          <li>Content should not be shot from a sideways or tilted angle</li>
+          <li>No personal logos, watermarks, gifs, full body shots or prominent text</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="disclosures" class="wrap">
+    <h2 class="puffy">Disclosures</h2>
+    <div class="disc">
+      <div class="panel">
+        <h3>Details + example of a compliant video</h3>
+        <div class="copyrow">
+          <div class="copy"><span class="k">Text overlay on screen</span><span class="v" id="d-overlay">#NYXCosmeticsPartner</span><button class="cp" type="button" data-copy="d-overlay">Copy</button></div>
+          <div class="copy"><span class="k">In caption</span><span class="v" id="d-caption">#NYXCosmeticsPartner @nyxcosmetics</span><button class="cp" type="button" data-copy="d-caption">Copy</button></div>
+        </div>
+        <h4 style="margin:22px 0 10px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink)">Other watch-outs</h4>
+        <ul class="checks">
+          <li>Say “NYX Professional Makeup” not “NYX”</li>
+          <li>Make sure product labels are readable (may have to invert video after filming)</li>
+          <li>Say full product names (ex: Buttermelt Glaze Stix)</li>
+        </ul>
+      </div>
+      <div class="examples">
+        <figure>
+          <img src="disclosure-ex-1.webp" alt="Example disclosure video: creator holding two Smushy SOS! lip masks" width="115" height="187" loading="lazy">
+          <figcaption>Disclosure placement example</figcaption>
+        </figure>
+        <figure>
+          <img src="disclosure-ex-2.webp" alt="Example disclosure video: creator in sunglasses holding Smushy SOS! lip masks, with NYX Cosmetics Partner overlay" width="100" height="152" loading="lazy">
+          <figcaption>Disclosure placement example</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="specs" class="wrap">
+    <h2 class="puffy">Video specs</h2>
+    <div class="specs">
+      <div class="phones">
+        <figure><img src="spec-safe-zone.png" alt="Phone frame showing the text overlay safe zone in the upper right" width="160" height="347" loading="lazy"><figcaption>Text overlay safe zone</figcaption></figure>
+        <figure><img src="spec-4x5.png" alt="Phone frame showing a 4:5 area, 1080x1350, where important elements should stay" width="160" height="344" loading="lazy"><figcaption>4:5 ratio · 1080x1350</figcaption></figure>
+      </div>
+      <ul class="spec-list">
+        <li><b>Overlay</b><span>Include NYX Cosmetics Partner overlay in upper right corner of your video. Ensure that it is clear and conspicuous.</span></li>
+        <li><b>Resolution</b><span>The recommended resolution is 1080 X 1920 pixels (default setting for vertically recorded video on most phones)</span></li>
+        <li><b>Aspect ratio</b><span>Maintain an aspect ratio of 9:16, but keep important elements at a 4:5 ratio (shown by dotted lines)</span></li>
+        <li><b>Format</b><span>Need to use either JPG, PNG, MP4 or MOV format</span></li>
+        <li><b>File size</b><span>Maximum size allowed is 4GB for video content</span></li>
+        <li><b>Quality</b><span>Film in 4k and with high quality lighting</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap thanks"><div class="puffy">Thank you!</div></div>
+</main>
+
+<footer class="wrap site-footer">
+  <span>NYX Professional Makeup · Smushy SOS!</span>
+  <span>Overcast Creators</span>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = document.getElementById(btn.dataset.copy).textContent.trim();
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, done); else done();
+    });
+  });
+</script>
+</body>
+</html>
