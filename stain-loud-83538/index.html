@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Stain Loud · Creator brief · Overcast Creators</title>
+<meta name="description" content="Creator brief for NYX Professional Makeup Stain Loud Stain &amp; Gloss Combo: themes, shades, video ideas and content guidelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink: #e9479f;
+    --pink-hot: #ff2d95;
+    --pink-soft: #f6a6cf;
+    --pink-pale: #fde4f1;
+    --plum: #4a0a2e;
+    --ink: #160710;
+    --orange: #ff8a1f;
+    --yellow: #ffc21a;
+    --white: #ffffff;
+    --muted: rgba(255, 255, 255, .86);
+    --line: rgba(255, 255, 255, .35);
+    --radius: 18px;
+    --max: 1140px;
+    --display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; color: var(--white); font-family: "Poppins", system-ui, -apple-system, sans-serif;
+    font-weight: 300; font-size: 16px; line-height: 1.6; text-wrap: pretty;
+    background: var(--pink) linear-gradient(180deg, #e33d98 0%, #ec55a9 40%, #f07ab9 100%) fixed;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--white); }
+  :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* loud type: white with a stacked plum shadow, like the brief */
+  .loud { font-family: var(--display); text-transform: uppercase; line-height: .92; letter-spacing: .01em; color: var(--white);
+    text-shadow: 2px 2px 0 var(--ink), 4px 4px 0 var(--ink), 6px 6px 0 rgba(22,7,16,.35); }
+  h2.loud { margin: 0; font-size: clamp(34px, 5.6vw, 64px); line-height: 1; }
+  h3 { margin: 0; font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; line-height: 1.1; }
+  .eyebrow { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; }
+  .intro { margin: 14px 0 0; max-width: 60ch; color: var(--muted); font-size: 17px; }
+
+  /* header */
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(22, 7, 16, .88); backdrop-filter: blur(10px); }
+  .site-header .wrap { display: flex; align-items: center; gap: 16px; min-height: 64px; }
+  .site-header img { width: 66px; }
+  .site-header .tag { border-left: 1px solid rgba(255,255,255,.25); padding-left: 14px; font-family: var(--display); font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--pink-hot); white-space: nowrap; }
+  .site-header nav { margin-left: auto; display: flex; gap: 20px; }
+  .site-header nav a { color: rgba(255,255,255,.78); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
+  .site-header nav a:hover { color: var(--white); }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; left: -10%; top: -30%; width: 70%; height: 120%; background: radial-gradient(closest-side, rgba(255,255,255,.35), rgba(255,255,255,0)); pointer-events: none; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(20px, 4vw, 48px); align-items: end; padding-top: clamp(32px, 5vw, 56px); }
+  .hero-copy { padding-bottom: clamp(36px, 6vw, 72px); }
+  .hero .eyebrow { background: var(--ink); padding: 7px 12px; border-radius: 999px; }
+  .hero h1 { margin: 20px 0 0; font-size: clamp(64px, 11.5vw, 150px); }
+  .hero .sub { margin-top: 14px; font-size: clamp(20px, 3vw, 34px); text-shadow: 2px 2px 0 var(--ink), 3px 3px 0 var(--ink); }
+  .hero .lede { margin: 20px 0 0; max-width: 44ch; font-size: 18px; font-weight: 400; }
+  .facts { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .fact { display: flex; align-items: center; gap: 10px; min-width: 0; background: var(--white); color: var(--ink); border-radius: 14px; padding: 10px 14px; box-shadow: 4px 4px 0 var(--ink); }
+  .fact .k { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--pink); }
+  .fact .v { font-family: var(--display); font-size: 18px; overflow-wrap: anywhere; }
+  .fact button { font: 600 12px/1 "Poppins", sans-serif; letter-spacing: .08em; text-transform: uppercase; border: 0; border-radius: 999px; padding: 8px 12px; background: var(--ink); color: var(--white); cursor: pointer; }
+  .hero-media { align-self: center; padding: 0 0 clamp(36px, 6vw, 72px); }
+  .hero-media img { width: 100%; border-radius: 24px; border: 4px solid var(--white); box-shadow: 10px 10px 0 var(--ink); transform: rotate(2deg); }
+
+  /* ticker */
+  .ticker { background: var(--ink); overflow: hidden; border-block: 3px solid var(--white); }
+  .ticker .track { display: flex; width: max-content; animation: slide 28s linear infinite; }
+  .ticker span { font-family: var(--display); text-transform: uppercase; font-size: 18px; letter-spacing: .04em; padding: 12px 22px; white-space: nowrap; }
+  .ticker span:nth-child(odd) { color: var(--pink-hot); }
+  @keyframes slide { to { transform: translateX(-50%); } }
+
+  section.wrap { padding-top: clamp(64px, 8vw, 104px); scroll-margin-top: 72px; }
+
+  /* themes */
+  .themes { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .theme { position: relative; background: var(--white); color: var(--ink); border-radius: var(--radius); padding: 70px 24px 26px; box-shadow: 6px 6px 0 var(--ink); }
+  .theme .n { position: absolute; top: -26px; left: 18px; font-size: 68px; }
+  .theme h3 { font-size: 21px; color: var(--pink); }
+  .theme p { margin: 10px 0 0; font-weight: 400; }
+
+  /* how to */
+  .howto { margin-top: 32px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 18px; }
+  .card { background: rgba(255,255,255,.16); border: 2px solid var(--line); border-radius: var(--radius); padding: clamp(20px, 3vw, 30px); }
+  .pack { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+  .pack img { width: 100%; border-radius: 12px; }
+  .callouts { display: flex; flex-wrap: wrap; gap: 10px; }
+  .callouts span { font-weight: 600; font-style: italic; background: var(--ink); border-radius: 999px; padding: 8px 14px; }
+  .looks { display: flex; flex-direction: column; justify-content: center; }
+  .looks h3 { font-size: clamp(20px, 2.4vw, 26px); }
+  .looks img { margin-top: 18px; width: 100%; border-radius: 12px; border: 3px solid var(--orange); }
+  .looks ol { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .looks li { margin-top: 10px; text-align: center; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+
+  /* shades */
+  .shades { margin-top: 32px; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(20px, 4vw, 48px); align-items: start; }
+  .shades figure { margin: 0; position: relative; }
+  .shades figure img { width: 100%; max-width: 380px; margin: 0 auto; border-radius: 16px; filter: drop-shadow(0 18px 30px rgba(74,10,46,.3)); }
+  .stamp { display: inline-grid; place-items: center; width: 150px; height: 150px; border-radius: 50%; border: 4px dashed var(--white); font-family: var(--display); text-transform: uppercase; text-align: center; font-size: 19px; line-height: 1.05; transform: rotate(-12deg); }
+  .shade-list { margin: 26px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; }
+  .shade-list li { display: flex; gap: 10px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--line); font-weight: 500; min-width: 0; }
+  .shade-list b { font-family: var(--display); font-weight: 400; color: var(--ink); min-width: 2ch; }
+
+  /* ideas */
+  .ideas { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .idea { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px; align-items: start; background: var(--white); color: var(--ink); border-radius: var(--radius); padding: 18px; box-shadow: 6px 6px 0 var(--ink); }
+  .idea img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; border: 3px solid var(--ink); }
+  .idea h3 { font-size: 20px; color: var(--pink); }
+  .idea ul { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .idea li { position: relative; padding-left: 16px; font-weight: 400; font-size: 15px; }
+  .idea li::before { content: ""; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--pink-hot); }
+
+  /* guidelines */
+  .rules { margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .rule { border-radius: var(--radius); padding: clamp(22px, 3vw, 32px); background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 45%, var(--pink-hot) 100%); color: var(--ink); border: 2px dashed rgba(255,255,255,.8); }
+  .rule h3 { font-size: clamp(22px, 2.6vw, 28px); color: var(--white); text-shadow: 2px 2px 0 var(--ink); text-align: center; }
+  .rule ul { margin: 18px 0 0; padding: 0 0 0 20px; display: grid; gap: 12px; font-weight: 400; }
+  .rule b { font-weight: 600; }
+  .notice { margin: 18px auto 0; max-width: 760px; background: var(--orange); color: var(--white); border: 2px dashed rgba(255,255,255,.8); border-radius: 12px; padding: 14px 20px; text-align: center; font-size: 14px; font-style: italic; }
+
+  /* connect */
+  .connect { margin-top: 36px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 22px; align-items: stretch; }
+  .panel { background: var(--white); color: var(--ink); border-radius: 24px; box-shadow: 8px 8px 0 var(--ink); }
+  .how { padding: clamp(24px, 3.4vw, 36px); display: flex; flex-direction: column; gap: 28px; }
+  .how .label, .lark .label { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--pink); }
+  .steps { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 0; counter-reset: step; }
+  .steps li { counter-increment: step; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(22,7,16,.1); font-size: 17px; font-weight: 500; line-height: 1.4; }
+  .steps li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .steps li::before { content: counter(step); display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--pink-hot); color: var(--white); font-family: var(--display); font-size: 22px; box-shadow: 3px 3px 0 var(--ink); }
+  .steps span { min-width: 0; overflow-wrap: anywhere; }
+  .steps b { font-weight: 600; color: var(--pink); }
+  .handles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr) minmax(0, .75fr); gap: 12px; }
+  .handle { min-width: 0; border-radius: 16px; padding: 14px 16px; background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 50%, var(--pink-hot) 100%); display: flex; flex-direction: column; gap: 6px; }
+  .handle .k { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(22,7,16,.75); }
+  .handle .v { font-family: var(--display); font-size: 16px; line-height: 1.2; overflow-wrap: break-word; }
+  .handle button { align-self: flex-start; margin-top: auto; font: 600 11px/1 "Poppins", sans-serif; letter-spacing: .1em; text-transform: uppercase; border: 0; border-radius: 999px; padding: 7px 11px; background: var(--ink); color: var(--white); cursor: pointer; }
+  .lark { overflow: hidden; display: flex; flex-direction: column; text-align: center; }
+  .lark .head { background: linear-gradient(135deg, var(--pink-hot) 0%, var(--pink) 100%); color: var(--white); padding: 22px 24px; }
+  .lark .head .label { color: rgba(255,255,255,.85); }
+  .lark .head h3 { text-shadow: 2px 2px 0 var(--ink); }
+  .lark .head h3 { margin-top: 8px; font-size: clamp(20px, 2.2vw, 24px); }
+  .lark .body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 26px 24px 28px; }
+  .lark .qrimg { padding: 12px; border-radius: 18px; border: 3px solid var(--pink-hot); background: var(--white); }
+  .lark .qrimg img { width: 168px; }
+  .lark .chat { font-weight: 600; font-size: 15px; line-height: 1.3; }
+  .lark .chat span { display: block; font-weight: 400; font-size: 13px; color: rgba(22,7,16,.65); }
+  .lark .scan { margin: 0; font-size: 14px; color: rgba(22,7,16,.75); }
+  @media (max-width: 960px) { .connect { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 560px) { .handles { grid-template-columns: minmax(0, 1fr); } .handle { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 12px; } .handle .k { flex-basis: 100%; } .handle .v { flex: 1; } .handle button { margin: 0; } .steps li { grid-template-columns: 44px minmax(0, 1fr); font-size: 16px; } .steps li::before { width: 44px; height: 44px; font-size: 19px; } }
+
+  .sign { margin-top: clamp(64px, 8vw, 104px); text-align: center; font-size: clamp(44px, 9vw, 120px); }
+  .site-footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 40px; padding-bottom: 40px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.8); }
+
+  @media (max-width: 960px) {
+    .site-header nav { display: none; }
+    .themes, .connect { grid-template-columns: minmax(0, 1fr); }
+    .theme { padding-top: 62px; }
+    .ideas { grid-template-columns: minmax(0, 1fr); }
+    .howto, .shades { grid-template-columns: minmax(0, 1fr); }
+    .theme + .theme { margin-top: 18px; }
+  }
+  @media (max-width: 760px) {
+    .hero .wrap { grid-template-columns: minmax(0, 1fr); padding-top: 28px; }
+    .hero-copy { padding-bottom: 0; }
+    .hero-media { padding: 8px 10px 44px 0; }
+    .shades figure img { max-width: 260px; }
+    .rules { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .idea { grid-template-columns: 104px minmax(0, 1fr); gap: 14px; padding: 14px; }
+    .shade-list { gap: 4px 12px; font-size: 14px; }
+    .looks li { font-size: 10px; letter-spacing: .02em; }
+    .fact .v { font-size: 15px; }
+    .stamp { width: 124px; height: 124px; font-size: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ticker .track { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <img src="nyx-logo.png" alt="NYX Professional Makeup" width="164" height="95">
+    <span class="tag">Stain Loud</span>
+    <nav aria-label="Brief sections">
+      <a href="#themes">Themes</a>
+      <a href="#how-to">How to</a>
+      <a href="#shades">Shades</a>
+      <a href="#ideas">Video ideas</a>
+      <a href="#guidelines">Guidelines</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Creator brief · NYX Professional Makeup</span>
+        <h1 class="loud">Stain Loud</h1>
+        <div class="sub loud">Stain &amp; Gloss Combo</div>
+        <p class="lede">Line, shape, or fill lips with one product. All-day stain meets loud shine, in 20 shades.</p>
+        <div class="facts">
+          <div class="fact"><span class="k">Price</span><span class="v">$15</span></div>
+          <div class="fact"><span class="k">PID</span><span class="v" id="pid">1732755403335700808</span><button type="button" data-copy="pid">Copy</button></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="hero-models.webp" alt="Two models wearing NYX Stain Loud, one biting the felt-tip stain pen, with the stain and gloss combo floating between them" width="704" height="966" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <span>Stain Loud</span><span>Stain &amp; Gloss Combo</span><span>20 shades</span><span>All-day stain</span><span>Loud shine</span><span>Vanilla scent</span>
+      <span>Stain Loud</span><span>Stain &amp; Gloss Combo</span><span>20 shades</span><span>All-day stain</span><span>Loud shine</span><span>Vanilla scent</span>
+    </div>
+  </div>
+
+  <section id="themes" class="wrap">
+    <h2 class="loud">Themes</h2>
+    <p class="intro">Three stories to build your video around. Pick the one that fits your content.</p>
+    <div class="themes">
+      <article class="theme">
+        <span class="n loud">#1</span>
+        <h3>Dual-ended stain &amp; gloss combo</h3>
+        <p>Line, Shape, or Fill Lips With One Product! This 2-in-1 Is Perfect for On-the-Go Convenience.</p>
+      </article>
+      <article class="theme">
+        <span class="n loud">#2</span>
+        <h3>Long-lasting</h3>
+        <p>All-Day Stain Meets Loud Shine With a Vanilla Scent.</p>
+      </article>
+      <article class="theme">
+        <span class="n loud">#3</span>
+        <h3>Mix &amp; match</h3>
+        <p>Available in 20 Shades, There Are So Many Options to Choose From.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="how-to" class="wrap">
+    <h2 class="loud">Info &amp; how to</h2>
+    <p class="intro">One end stains, the other end glosses. Show both.</p>
+    <div class="howto">
+      <div class="card pack">
+        <img src="stainloud-pack.webp" alt="Stain Loud felt-tip stain end and gloss end, with a gloss swatch and a stain stroke" width="480" height="230" loading="lazy">
+        <div class="callouts"><span>Precise felt tip applicator!</span><span>Hugs every lip curve!</span></div>
+      </div>
+      <div class="card looks">
+        <h3>Multiple ways to mouth off!</h3>
+        <img src="lip-looks.webp" alt="Three lip looks: stain only, full stain with gloss, and stain as liner with gloss" width="367" height="93" loading="lazy">
+        <ol>
+          <li>Just the ink</li>
+          <li>Full ink + gloss</li>
+          <li>Liner ink + gloss</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="shades" class="wrap">
+    <h2 class="loud">Shade range</h2>
+    <div class="shades">
+      <figure>
+        <img src="shade-range.webp" alt="All 20 Stain Loud shades lined up, each labelled with its number and name" width="350" height="855" loading="lazy">
+      </figure>
+      <div>
+        <div class="stamp">20 shades available!</div>
+        <ul class="shade-list">
+          <li><b>01</b>Bold N' Beige</li>
+          <li><b>02</b>Bare-ly Quiet</li>
+          <li><b>03</b>Choco Chattin'</li>
+          <li><b>04</b>Called Out Cocoa</li>
+          <li><b>05</b>Mocha Me Mad</li>
+          <li><b>06</b>Amber Attitude</li>
+          <li><b>07</b>Ate Up Apricot</li>
+          <li><b>08</b>Mean Peach</li>
+          <li><b>09</b>On About Opal</li>
+          <li><b>10</b>Pink N' Petty</li>
+          <li><b>11</b>Boomin' Blush</li>
+          <li><b>12</b>Pout Loud Pink</li>
+          <li><b>13</b>Rosie N' Roasted</li>
+          <li><b>14</b>Mouthy Mauve</li>
+          <li><b>15</b>Hot Mouth Pink</li>
+          <li><b>16</b>Red To Filth</li>
+          <li><b>17</b>Cherry Chatter</li>
+          <li><b>18</b>Mouth Off Magenta</li>
+          <li><b>19</b>Pop Off Plum</li>
+          <li><b>20</b>Laven'durr</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas" class="wrap">
+    <h2 class="loud">Example videos &amp; ideas</h2>
+    <p class="intro">Four formats with hooks to get you started. Say them in your own words.</p>
+    <div class="ideas">
+      <article class="idea">
+        <img src="ex-mukbang.webp" alt="Example TikTok: creator biting a sandwich during a 10 hour wear test" width="226" height="403" loading="lazy">
+        <div>
+          <h3>Mukbang / eating test</h3>
+          <ul>
+            <li>“This Is the Only Lip Stain I Trust for This Messy Meal.”</li>
+            <li>“Can This Lip Stain Survive This Dinner Party?”</li>
+            <li>“Let’s Put This Lip Stain to the Ultimate Mukbang Test.”</li>
+          </ul>
+        </div>
+      </article>
+      <article class="idea">
+        <img src="ex-mix-match.webp" alt="Example TikTok: NYX Cosmetics Partner creator applying lip gloss" width="226" height="403" loading="lazy">
+        <div>
+          <h3>Mix and match</h3>
+          <ul>
+            <li>“Look at All the Various Combos You Can Create With This One Product.”</li>
+            <li>“This 2-in-1 Product Offers You So Many Options to Mix and Match.”</li>
+            <li>“Here Are My Top 3 Favorite Lip Combos With the New Shades.”</li>
+          </ul>
+        </div>
+      </article>
+      <article class="idea">
+        <img src="ex-drama.webp" alt="Example TikTok: creator holding an iced coffee at 2:01 PM" width="218" height="395" loading="lazy">
+        <div>
+          <h3>The drama of life</h3>
+          <ul>
+            <li>“Come With Me to See How Well This Lip Stain Holds Up During My Hectic Day.”</li>
+            <li>“I Need a Lip Stain That Can Keep Up With My Busy Schedule.”</li>
+            <li>“How Well Can This Lip Stain Hold Up After This Crazy Day?”</li>
+          </ul>
+        </div>
+      </article>
+      <article class="idea">
+        <img src="ex-kissing.webp" alt="Example TikTok: creator puckering her lips" width="221" height="393" loading="lazy">
+        <div>
+          <h3>Kissing test</h3>
+          <ul>
+            <li>“Ladies, This Lip Stain Has Got You Covered With Your Man.”</li>
+            <li>“We’re Putting This Lip Stain to the Test With My Boyfriend.”</li>
+            <li>“This Is the Lip Stain to Get If You Want to Be Sure Your Man’s Lips Aren’t the Same Shade as You After Kissing.”</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="guidelines" class="wrap">
+    <h2 class="loud">Content guidelines</h2>
+    <div class="rules">
+      <div class="rule">
+        <h3>Content musts</h3>
+        <ul>
+          <li>Must ensure you’re saying/captioning the full product name and shade</li>
+          <li>Integrate the product naturally within first 3-5 seconds.</li>
+          <li>In your own words, highlight your favorite product benefits.</li>
+          <li>Zoom in on face to capture close-up of product application.</li>
+        </ul>
+      </div>
+      <div class="rule">
+        <h3>Mandatory disclosures</h3>
+        <ul>
+          <li>Include the right overlay and caption to be eligible for media sparking</li>
+          <li><b>In Video:</b> NYX Cosmetics Partner must be added as a text overlay for the duration of the video</li>
+          <li><b>Caption:</b> #NYXCosmeticsPartner, @nyxcosmetics</li>
+          <li>Any reference to the brand must be NYX Professional Makeup – not ‘NYX’</li>
+        </ul>
+      </div>
+    </div>
+    <p class="notice"><b>Confidentiality Notice:</b> These TikTok Shop content guidelines are strictly confidential and intended for internal use only. Do not share, distribute, or disclose to external parties.</p>
+  </section>
+
+  <section id="connect" class="wrap">
+    <h2 class="loud">Tag &amp; connect with us!</h2>
+    <p class="intro">Every video needs these three things. Copy the tags below so they're exact.</p>
+    <div class="connect">
+      <div class="panel how">
+        <div>
+          <div class="label">In every video</div>
+          <ol class="steps">
+            <li><span><b>Text overlay</b> NYX Cosmetics Partner in video</span></li>
+            <li><span><b>Disclose</b> that NYX Cosmetics gifted you the item</span></li>
+            <li><span><b>#NYXCosmeticsPartner</b> in caption</span></li>
+          </ol>
+        </div>
+        <div class="handles">
+          <div class="handle"><span class="k">Account tag</span><span class="v" id="tag-account">@nyxcosmetics</span><button type="button" data-copy="tag-account">Copy</button></div>
+          <div class="handle"><span class="k">Hashtag</span><span class="v" id="tag-hash">#NYXCosmeticsPartner</span><button type="button" data-copy="tag-hash">Copy</button></div>
+          <div class="handle"><span class="k">Brand name</span><span class="v" id="tag-brand">NYX</span><button type="button" data-copy="tag-brand">Copy</button></div>
+        </div>
+      </div>
+      <div class="panel lark">
+        <div class="head">
+          <div class="label">Lark community</div>
+          <h3>Join our Lark community!</h3>
+        </div>
+        <div class="body">
+          <div class="qrimg"><img src="lark-qr.png" alt="QR code to join the L'Oréal USA creator chat on Lark" width="300" height="300" loading="lazy"></div>
+          <div class="chat">[CREATOR CHAT] L'Oré-ALL<span>L'Oréal USA</span></div>
+          <p class="scan">Scan the group QR code to join now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap sign loud">Stain Loud</div>
+</main>
+
+<footer class="wrap site-footer">
+  <span>NYX Professional Makeup · Stain Loud</span>
+  <span>Overcast Creators</span>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = document.getElementById(btn.dataset.copy).textContent.trim();
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, done); else done();
+    });
+  });
+</script>
+</body>
+</html>
