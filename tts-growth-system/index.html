@@ -186,16 +186,17 @@ button{font:inherit}
 .src.on{opacity:1;transform:none}
 .src.meta{background:var(--meta)}
 .src.tt{background:var(--tt)}
-.fx-grid{position:absolute;left:16px;right:16px;top:60px;bottom:14px;display:grid;grid-template-columns:var(--cols);grid-template-rows:repeat(10,minmax(0,1fr));column-gap:var(--cg);row-gap:6px;z-index:2}
-.fv{display:flex;align-items:center;padding-left:calc(var(--thw,26px) + 12px);font-size:13px;line-height:1.2;min-width:0;opacity:0;transition:opacity .4s}
+.fx-grid{position:absolute;left:16px;right:16px;top:60px;bottom:14px;display:grid;grid-template-columns:var(--cols);grid-template-rows:repeat(40,minmax(0,1fr));column-gap:var(--cg);row-gap:2px;z-index:2}
+.fv{display:flex;align-items:center;padding-left:calc(var(--thw,10px) + 8px);font-family:var(--mono);font-size:10px;line-height:1;white-space:nowrap;min-width:0;opacity:0;transition:opacity .4s}
 .fv.on{opacity:1}
-.fv small{display:block;font-family:var(--mono);font-size:11px;color:var(--grey-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pg{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;align-content:center;column-gap:12px;row-gap:6px;padding:0 12px;border-radius:10px;background:rgba(255,255,255,.055);border:1px solid var(--line-d);color:#fff;text-align:left;cursor:pointer;min-width:0;opacity:0;transition:border-color .3s,background-color .3s}
-.pg .u{font-family:var(--mono);font-size:11px;color:#CFCFCF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;gap:6px;align-items:center}
-.pg .st{display:none;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 6px;border-radius:999px}
-.pg .r{grid-row:1/3;grid-column:2;font-size:19px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;align-self:center}
-.pg .sb{height:3px;border-radius:2px;background:rgba(255,255,255,.12);overflow:hidden;display:block}
-.pg .sb i{display:block;height:100%;width:0}
+.fv>div{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.fv small{display:inline;font-size:10px;color:var(--grey-2)}
+.pg{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:8px;padding:0 8px;border-radius:4px;overflow:hidden;background:rgba(255,255,255,.055);border:1px solid var(--line-d);color:#fff;text-align:left;cursor:pointer;min-width:0;opacity:0;transition:border-color .3s,background-color .3s}
+.pg .u{position:relative;z-index:1;font-family:var(--mono);font-size:10px;line-height:1;color:#CFCFCF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;gap:6px;align-items:center}
+.pg .st{display:none;font-family:var(--sans);font-size:8px;line-height:1;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:1px 4px;border-radius:999px}
+.pg .r{position:relative;z-index:1;font-size:11px;line-height:1;font-variant-numeric:tabular-nums}
+.pg .sb{position:absolute;left:0;top:0;bottom:0;right:0;display:block;pointer-events:none}
+.pg .sb i{display:block;height:100%;width:0;opacity:.38}
 .pg.dtc .sb i{background:var(--dtc)}
 .pg.amz .sb i{background:var(--amz)}
 .pg.is-scale{border-color:var(--mag-2);background:rgba(180,44,126,.26)}
@@ -218,11 +219,11 @@ button{font:inherit}
   .fx-head{left:10px;right:10px;height:48px;font-size:9px}
   .fx-head .hl{display:none}
   .fx-grid{left:10px;right:10px;top:48px;bottom:10px;row-gap:4px}
-  .fv{font-size:10px;padding-left:calc(var(--thw,20px) + 6px)}
-  .fv small{display:none}
-  .pg{padding:0 7px;column-gap:6px;row-gap:4px}
-  .pg .u{font-size:9px}
-  .pg .r{font-size:14px}
+  .fx-grid{row-gap:1px}
+  .fv>div{display:none}
+  .pg{padding:0 4px;border-radius:2px}
+  .pg .u{display:none}
+  .pg .r{font-size:7px;grid-column:1/3;justify-self:end}
   .src{height:24px;font-size:11px;padding:0 9px}
 }
 
@@ -339,6 +340,7 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
   .rv.in{animation:none}
 }
 </style>
+
 </head>
 <body>
 <div class="topbar" id="topbar"></div>
@@ -354,13 +356,13 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
 <header class="hero pad" id="top">
   <div class="wall" id="wall" aria-hidden="true"></div>
   <div class="hero-in in">
-    <div class="console" role="img" aria-label="Example brand: 1,240 videos absorbed, 6 products mapped, 10 selected by AI, 20 pages built">
+    <div class="console" role="img" aria-label="Example brand: 1,240 videos pulled, 6 products mapped, 40 selected by AI, 80 pages built">
       <div class="console-top"><span class="live">Example brand · last 90 days</span><span>TikTok Shop → all channels</span></div>
       <div class="console-grid">
-        <div><b data-count="1240">1,240</b><small>Videos absorbed</small></div>
+        <div><b data-count="1240">1,240</b><small>Videos pulled</small></div>
         <div><b data-count="6">6</b><small>Products mapped</small></div>
-        <div><b data-count="10">10</b><small>Selected by AI</small></div>
-        <div><b data-count="20">20</b><small>Pages built</small></div>
+        <div><b data-count="40">40</b><small>Selected by AI</small></div>
+        <div><b data-count="80">80</b><small>Pages built</small></div>
       </div>
       <div class="console-bar"><i id="consoleBar"></i></div>
     </div>
@@ -400,23 +402,23 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
   <div class="stick fx">
     <div class="fx-rail">
       <span class="label">The flow · example brand</span>
-      <div class="fx-big"><b id="fxBig">0</b><small id="fxUnit">videos absorbed</small></div>
+      <div class="fx-big"><b id="fxBig">0</b><small id="fxUnit">videos pulled</small></div>
       <div class="swap fx-texts" id="fxTexts">
         <div class="on"><h3>Pull your videos</h3><p>Every video from the last 90 days, matched to the product ID it sells.</p></div>
-        <div><h3>AI winning creative</h3><p>AI scores every video on TikTok sales and on how likely it is to sell elsewhere. The top 10 go forward.</p></div>
-        <div><h3>Build pages</h3><p>Each of the 10 videos gets a DTC landing page and an Amazon page.</p></div>
-        <div><h3>Trickle ad spend</h3><p>Meta and TikTok spend starts small and even across all 20 pages. Each round, budget moves toward the pages returning the most.</p></div>
+        <div><h3>AI winning creative</h3><p>AI scores every video on TikTok sales and on how likely it is to sell elsewhere. The top 40 go forward.</p></div>
+        <div><h3>Build pages</h3><p>Each of the 40 videos gets a DTC landing page and an Amazon page.</p></div>
+        <div><h3>AI spend management</h3><p>AI starts Meta and TikTok spend small and even across all 80 pages. Each round, it moves budget toward the pages returning the most.</p></div>
       </div>
       <ol class="fx-steps" id="fxSteps">
         <li><button data-s="0" class="on"><span>01</span>Pull 1,240 videos<i><b></b></i></button></li>
-        <li><button data-s="1"><span>02</span>AI picks 10 winners<i><b></b></i></button></li>
-        <li><button data-s="2"><span>03</span>Build 10 DTC + 10 Amazon pages<i><b></b></i></button></li>
-        <li><button data-s="3"><span>04</span>Trickle spend, find ROAS<i><b></b></i></button></li>
+        <li><button data-s="1"><span>02</span>AI picks 40 winners<i><b></b></i></button></li>
+        <li><button data-s="2"><span>03</span>Build 40 DTC + 40 Amazon pages<i><b></b></i></button></li>
+        <li><button data-s="3"><span>04</span>AI spend management<i><b></b></i></button></li>
       </ol>
       <div class="swap fx-extra" id="fxExtra">
         <div class="on"><div class="lg" id="fxLegend"></div></div>
-        <div><div class="kv"><span>Scored</span><b>1,240 videos</b><span>Selected</span><b>Top 10</b><span>Score range</span><b>86–97</b></div></div>
-        <div><div class="kv"><span>DTC landing pages</span><b>10</b><span>Amazon pages</span><b>10</b><span>Source</span><b>One video each</b></div></div>
+        <div><div class="kv"><span>Scored</span><b>1,240 videos</b><span>Selected</span><b>Top 40</b><span>Score range</span><b>78–97</b></div></div>
+        <div><div class="kv"><span>DTC landing pages</span><b>40</b><span>Amazon pages</span><b>40</b><span>Source</span><b>One video each</b></div></div>
         <div>
           <div class="kv">
             <span>Round</span><b id="fxRound">0 of 6</b>
@@ -603,12 +605,13 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
   var N=1240, rng=mulberry32(20261125);
   var prodOf=[]; PRODUCTS.forEach(function(p,i){for(var k=0;k<p[1];k++)prodOf.push(i);});
   for(var i=N-1;i>0;i--){var j=Math.floor(rng()*(i+1));var t=prodOf[i];prodOf[i]=prodOf[j];prodOf[j]=t;}
-  var PICK_PROD=[0,4,3,1,2,5,0,3,4,1];
+  var PICK_PROD=[0,4,3,1,2,5,0,3,4,1,1,0,3,1,4,4,3,2,1,3,0,0,1,1,5,0,4,0,5,1,4,2,1,0,0,4,5,1,0,5];
   var ROWS=[]; PICK_PROD.forEach(function(pp){var k;do{k=Math.floor(rng()*N);}while(prodOf[k]!==pp||ROWS.indexOf(k)>-1);ROWS.push(k);});
-  var SCORES=[97,95,94,92,91,90,89,88,87,86];
+  var SCORES=[97,97,96,96,95,95,94,94,93,93,92,92,91,91,90,90,89,89,88,88,87,87,86,86,85,85,84,84,83,83,82,82,81,81,80,80,79,79,78,78];
   var vid=function(k){return 'V-'+String(k+1).padStart(4,'0');};
   var pickRow=new Int16Array(N).fill(-1); ROWS.forEach(function(k,i){pickRow[k]=i;});
-  var DTC=[4.8,2.1,3.6,1.2,2.7,0.9,3.1,1.7,2.4,1.4], AMZ=[3.2,3.9,1.6,2.2,1.1,2.9,1.9,4.3,1.3,2.6];
+  var DTC=[4.8,2.1,3.6,1.2,2.7,0.9,3.1,1.7,2.4,1.4,3.7,1.9,1.4,4.1,1.2,2.9,2.9,2.2,1.8,0.8,1.5,2.8,4.2,1.5,2.9,1.7,2.1,1.6,1.6,3.8,3.2,0.9,4.1,2.6,2.1,0.8,2.0,2.1,3.6,2.8],
+      AMZ=[3.2,3.9,1.6,2.2,1.1,2.9,1.9,4.3,1.3,2.6,0.9,2.4,1.1,0.7,1.7,2.0,1.5,1.2,3.7,3.3,2.5,3.4,2.7,3.0,2.5,3.7,2.2,1.8,1.2,3.5,2.6,0.7,1.7,0.9,1.5,0.7,1.2,3.6,2.3,2.9];
   var PAGES=[]; ROWS.forEach(function(k,i){
     PAGES.push({i:i,k:k,kind:'dtc',roas:DTC[i],noise:rng()*2-1,meta:.7,tt:.3});
     PAGES.push({i:i,k:k,kind:'amz',roas:AMZ[i],noise:rng()*2-1,meta:.3,tt:.7});
@@ -629,7 +632,7 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
   var MAXSPEND=Math.max.apply(null,SIM[R].spend);
   var RANK=PAGES.map(function(_,j){return j;}).sort(function(a,b){return SIM[R].est[b]-SIM[R].est[a];});
   var STATUS=PAGES.map(function(){return '';});
-  RANK.slice(0,3).forEach(function(j){STATUS[j]='scale';}); RANK.slice(-6).forEach(function(j){STATUS[j]='pause';});
+  RANK.slice(0,8).forEach(function(j){STATUS[j]='scale';}); RANK.slice(-24).forEach(function(j){STATUS[j]='pause';});
   var pname=function(k){return PRODUCTS[prodOf[k]][0];};
 
   /* ===== Hero: video wall, console counters ===== */
@@ -688,7 +691,7 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
       plug:'<svg viewBox="0 0 360 150" role="img" aria-label="TikTok Shop, catalog and ad accounts connect to the system">'+
         ['TikTok Shop','Catalog','Ad accounts'].map(function(l,i){var y=22+i*40;return '<rect x="16" y="'+y+'" width="128" height="28" rx="14" fill="#fff" stroke="#000" stroke-opacity=".15"/><text x="80" y="'+(y+18.5)+'" text-anchor="middle" font-size="13" fill="#000" '+S+'>'+l+'</text><path d="M144 '+(y+14)+' C 200 '+(y+14)+' 210 75 252 75" fill="none" stroke="#000" stroke-dasharray="4 4"/>';}).join('')+
         '<circle cx="290" cy="75" r="40" fill="#000"/><text x="290" y="80" text-anchor="middle" font-size="14" fill="#fff" '+S+'>System</text></svg>',
-      absorb:(function(){var s='<svg viewBox="0 0 360 150" role="img" aria-label="Videos tagged with product IDs">';var cols=['#F2B4C6','#CFE3CF','#BCD6F2','#F6D7A1','#E6BEA2','#D5C6F0'];for(var r2=0;r2<3;r2++)for(var c2=0;c2<12;c2++){var ci=(r2*5+c2*7)%6;s+='<rect x="'+(16+c2*27.5)+'" y="'+(14+r2*42)+'" width="22" height="34" rx="4" fill="'+cols[ci]+'"/>';}
+      pull:(function(){var s='<svg viewBox="0 0 360 150" role="img" aria-label="Videos tagged with product IDs">';var cols=['#F2B4C6','#CFE3CF','#BCD6F2','#F6D7A1','#E6BEA2','#D5C6F0'];for(var r2=0;r2<3;r2++)for(var c2=0;c2<12;c2++){var ci=(r2*5+c2*7)%6;s+='<rect x="'+(16+c2*27.5)+'" y="'+(14+r2*42)+'" width="22" height="34" rx="4" fill="'+cols[ci]+'"/>';}
         s+='<rect x="186" y="58" width="132" height="30" rx="15" fill="#000"/><text x="252" y="77" text-anchor="middle" font-size="12" fill="#fff" '+M+'>SKU 1042 · Serum</text></svg>';return s;})(),
       detect:(function(){var v=[92,88,61,54,47,40],s='<svg viewBox="0 0 360 150" role="img" aria-label="AI scores, two videos flagged">';v.forEach(function(x,i){var y=16+i*21;s+='<rect x="16" y="'+y+'" width="300" height="12" rx="6" fill="#fff"/><rect x="16" y="'+y+'" width="'+(x*3)+'" height="12" rx="6" fill="'+(i<2?'#B42C7E':'#000')+'" fill-opacity="'+(i<2?1:.25)+'"/><text x="330" y="'+(y+10.5)+'" font-size="11" fill="#000" '+M+'>'+x+'</text>';});return s+'</svg>';})(),
       license:'<svg viewBox="0 0 360 150" role="img" aria-label="Usage rights, flat fee and percentage of spend"><rect x="16" y="14" width="150" height="122" rx="12" fill="#fff"/><rect x="32" y="32" width="90" height="8" rx="4" fill="#000"/><rect x="32" y="52" width="118" height="6" rx="3" fill="#000" fill-opacity=".15"/><rect x="32" y="66" width="104" height="6" rx="3" fill="#000" fill-opacity=".15"/><rect x="32" y="80" width="112" height="6" rx="3" fill="#000" fill-opacity=".15"/><path d="M34 112 q 14 -18 26 0 t 26 0" fill="none" stroke="#000" stroke-width="2"/>'+
@@ -699,13 +702,13 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
         '<path d="M100 38 H 176" stroke="#000" stroke-dasharray="4 4"/><path d="M100 110 H 176" stroke="#000" stroke-dasharray="4 4"/>'+
         '<rect x="180" y="12" width="76" height="56" rx="8" fill="#fff"/><rect x="180" y="12" width="76" height="20" rx="8" fill="#E27BB9"/><text x="218" y="56" text-anchor="middle" font-size="11" fill="#000" '+M+'>DTC</text>'+
         '<rect x="180" y="82" width="76" height="56" rx="8" fill="#fff"/><rect x="180" y="82" width="76" height="20" rx="8" fill="#F0BE5A"/><text x="218" y="126" text-anchor="middle" font-size="11" fill="#000" '+M+'>Amazon</text>'+
-        '<rect x="272" y="12" width="72" height="56" rx="8" fill="#fff" fill-opacity=".6"/><rect x="272" y="82" width="72" height="56" rx="8" fill="#fff" fill-opacity=".6"/><text x="308" y="44" text-anchor="middle" font-size="16" fill="#000" fill-opacity=".4" '+S+'>+9</text><text x="308" y="114" text-anchor="middle" font-size="16" fill="#000" fill-opacity=".4" '+S+'>+9</text></svg>',
+        '<rect x="272" y="12" width="72" height="56" rx="8" fill="#fff" fill-opacity=".6"/><rect x="272" y="82" width="72" height="56" rx="8" fill="#fff" fill-opacity=".6"/><text x="308" y="44" text-anchor="middle" font-size="16" fill="#000" fill-opacity=".4" '+S+'>+39</text><text x="308" y="114" text-anchor="middle" font-size="16" fill="#000" fill-opacity=".4" '+S+'>+39</text></svg>',
       measure:'<svg viewBox="0 0 360 150" role="img" aria-label="ROAS with the system against baseline"><rect x="70" y="72" width="70" height="62" rx="6" fill="#000" fill-opacity=".2"/><rect x="200" y="30" width="70" height="104" rx="6" fill="#B42C7E"/><text x="105" y="62" text-anchor="middle" font-size="13" fill="#000" '+S+'>Baseline</text><text x="235" y="22" text-anchor="middle" font-size="13" fill="#000" '+S+'>With system</text><path d="M16 134 H 344" stroke="#000" stroke-opacity=".2"/></svg>',
       loop:'<svg viewBox="0 0 360 150" role="img" aria-label="Results loop back into selection"><circle cx="180" cy="75" r="46" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2" stroke-dasharray="6 6"/><path d="M220 52 l10 -8 l2 13" fill="none" stroke="#fff" stroke-width="2"/><text x="180" y="80" text-anchor="middle" font-size="14" fill="#fff" '+S+'>Repeat</text></svg>'
     };
     var M6=[
       ['Connect your shop','Connect your TikTok Shop, product catalog and ad accounts.','plug'],
-      ['Pull your videos','Pull every video from the last 90 days and match each one to its product ID.','absorb'],
+      ['Pull your videos','Pull every video from the last 90 days and match each one to its product ID.','pull'],
       ['AI winning creative','AI finds your best-selling videos, plus the ones most likely to sell on other channels.','detect'],
       ['Request usage rights','Ask each creator for usage rights. Pay a flat fee plus a percentage of ad spend.','license'],
       ['Build pages, run ads','Build a landing page for each product or video. Run Meta ads to your site and TikTok ads to Amazon.','launch'],
@@ -733,7 +736,7 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
   var fvEls=[], pgEls=[];
   ROWS.forEach(function(k,i){
     var fv=document.createElement('div');fv.className='fv';
-    fv.innerHTML='<div><span>'+vid(k)+'</span><small>'+pname(k)+' · score '+SCORES[i]+'</small></div>';
+    fv.innerHTML='<div><span>'+vid(k)+'</span> <small>'+pname(k)+' · '+SCORES[i]+'</small></div>';
     grid.appendChild(fv);fvEls.push(fv);
     [0,1].forEach(function(n){
       var j=i*2+n, pg=PAGES[j], b=document.createElement('button');
@@ -806,16 +809,16 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
 
     // big number
     var bigTxt, unitTxt;
-    if(st===0){bigTxt=Math.round(clamp(l1*1.1)*N).toLocaleString('en-US');unitTxt='videos absorbed';}
-    else if(st===1){bigTxt=Math.round(lerp(N,10,ease(seg(l2,0,.62)))).toLocaleString('en-US');unitTxt=l2<.62?'videos in contention':'videos selected';}
-    else if(st===2){bigTxt=String(Math.round(l3*20));unitTxt='pages built';}
+    if(st===0){bigTxt=Math.round(clamp(l1*1.1)*N).toLocaleString('en-US');unitTxt='videos pulled';}
+    else if(st===1){bigTxt=Math.round(lerp(N,40,ease(seg(l2,0,.62)))).toLocaleString('en-US');unitTxt=l2<.62?'videos in contention':'videos selected';}
+    else if(st===2){bigTxt=String(Math.round(l3*80));unitTxt='pages built';}
     else {var best=rd?Math.max.apply(null,SIM[rd].est):0;bigTxt=rd?best.toFixed(1)+'x':'—';unitTxt=rd?'best page ROAS · round '+rd:'spend about to start';}
     if(bigTxt+unitTxt!==lastBig){big.textContent=bigTxt;unit.textContent=unitTxt;lastBig=bigTxt+unitTxt;}
 
     // page cards
     PAGES.forEach(function(pg,j){
       var o=pgEls[j], a;
-      if(p<.42)a=0; else if(p>=.6)a=1; else {var d=pg.i*.055+(pg.kind==='amz'?.08:0);a=ease(seg(l3,d,d+.35));}
+      if(p<.42)a=0; else if(p>=.6)a=1; else {var d=pg.i*.014+(pg.kind==='amz'?.08:0);a=ease(seg(l3,d,d+.35));}
       var op=a; if(done&&STATUS[j]==='pause')op=Math.min(op,.4);
       setS(o,'opacity',op.toFixed(3)); setS(o,'transform','translateX('+((1-a)*14).toFixed(1)+'px)');
       setT(o.r,rd?SIM[rd].est[j].toFixed(1)+'x':'—');
@@ -881,11 +884,11 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
       ctx.lineWidth=1;
       ROWS.forEach(function(k,i){
         var th=G.thumb[i], d=G.card[i*2], a2=G.card[i*2+1]; if(!th||!d)return;
-        var aa=p>=.6?1:seg(l3,i*.055,i*.055+.35); if(aa<=0)return;
+        var aa=p>=.6?1:seg(l3,i*.014,i*.014+.35); if(aa<=0)return;
         var y=th.y+th.h/2, x0=th.x+th.w+4, x1=d.x;
         ctx.globalAlpha=.4*aa; ctx.strokeStyle='#fff'; ctx.setLineDash([]);
         ctx.beginPath(); ctx.moveTo(x0,y); ctx.lineTo(lerp(x0,x1,aa),y); ctx.stroke();
-        var ab=p>=.6?1:seg(l3,i*.055+.08,i*.055+.43);
+        var ab=p>=.6?1:seg(l3,i*.014+.08,i*.014+.43);
         if(ab>0){ctx.globalAlpha=.3*ab;ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(d.x+d.w,y);ctx.lineTo(lerp(d.x+d.w,a2.x,ab),y);ctx.stroke();ctx.setLineDash([]);}
       });
     }
@@ -895,7 +898,7 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
         if(!show[c])return;
         PAGES.forEach(function(pg,j){
           var q=streamPts(c,j), wgt=sh[j]*pg[c];
-          ctx.globalAlpha=.08+wgt*1.6; ctx.strokeStyle=COLORS[c]; ctx.lineWidth=.6+wgt*26;
+          ctx.globalAlpha=.06+wgt*5; ctx.strokeStyle=COLORS[c]; ctx.lineWidth=.4+wgt*80;
           ctx.beginPath(); ctx.moveTo(q.x0,q.y0); ctx.bezierCurveTo(q.x1,q.y1,q.x2,q.y2,q.x3,q.y3); ctx.stroke();
         });
       });
@@ -918,7 +921,7 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
       ctx.lineWidth=2;
       PAGES.forEach(function(pg,j){
         if(hit[j]<=0)return; var cd=G.card[j];
-        ctx.globalAlpha=hit[j]*.55; ctx.strokeStyle='#fff'; rr(cd.x-1,cd.y-1,cd.w+2,cd.h+2,11); ctx.stroke();
+        ctx.globalAlpha=hit[j]*.55; ctx.strokeStyle='#fff'; rr(cd.x-1,cd.y-1,cd.w+2,cd.h+2,5); ctx.stroke();
         hit[j]=Math.max(0,hit[j]-dt*2.2);
       });
     } else if(parts.length){parts.length=0;}
@@ -1009,7 +1012,7 @@ input[type=range]{width:100%;accent-color:var(--mag-2)}
     out+=link(t.x+14,t.y,d.x,d.y+v.md*scale,v.td*scale,'#6FE9D2','td','TikTok → DTC landing pages: '+fmt$(v.td)+'.');
     out+=link(t.x+14,t.y+v.td*scale,a.x,a.y,v.ta*scale,'#6FE9D2','ta','TikTok → Amazon pages: '+fmt$(v.ta)+'. The main TikTok route.');
     function node(n,col,label,sub,anchor){var tx=anchor==='end'?n.x-12:n.x+26;return '<rect x="'+n.x+'" y="'+n.y+'" width="14" height="'+n.h.toFixed(1)+'" rx="3" fill="'+col+'"/><text x="'+tx+'" y="'+(n.y+n.h/2-2)+'" text-anchor="'+(anchor||'start')+'">'+label+'</text><text class="sub" x="'+tx+'" y="'+(n.y+n.h/2+16)+'" text-anchor="'+(anchor||'start')+'">'+sub+'</text>';}
-    out+=node(s,'#000','10 videos','selected by AI');
+    out+=node(s,'#000','40 videos','selected by AI');
     out+=node(m,'#7B93FF','Meta ads',fmt$(meta));
     out+=node(t,'#6FE9D2','TikTok ads',fmt$(tt));
     out+=node(d,'#E27BB9','DTC pages',fmt$(dtc),'end');
